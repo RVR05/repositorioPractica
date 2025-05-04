@@ -1,0 +1,9 @@
+/home/robert/Escritorio/Repositorios 2do cuatri/Visual/practica2/CMakeFiles/obj3DLib.dir
+/home/robert/Escritorio/Repositorios 2do cuatri/Visual/practica2/CMakeFiles/GLUILib.dir
+/home/robert/Escritorio/Repositorios 2do cuatri/Visual/practica2/CMakeFiles/modelosBelkanLib.dir
+/home/robert/Escritorio/Repositorios 2do cuatri/Visual/practica2/CMakeFiles/comportamientosLib.dir
+/home/robert/Escritorio/Repositorios 2do cuatri/Visual/practica2/CMakeFiles/motorLib.dir
+/home/robert/Escritorio/Repositorios 2do cuatri/Visual/practica2/CMakeFiles/practica2.dir
+/home/robert/Escritorio/Repositorios 2do cuatri/Visual/practica2/CMakeFiles/practica2SG.dir
+/home/robert/Escritorio/Repositorios 2do cuatri/Visual/practica2/CMakeFiles/edit_cache.dir
+/home/robert/Escritorio/Repositorios 2do cuatri/Visual/practica2/CMakeFiles/rebuild_cache.dir
