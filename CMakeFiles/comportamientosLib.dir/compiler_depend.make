@@ -126,6 +126,20 @@ CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/auxiliar.cpp.o: Compor
   /usr/include/asm-generic/errno.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/c++/11/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/11/bits/std_abs.h \
   include/comportamientos/comportamiento.hpp \
   /usr/include/c++/11/vector \
   /usr/include/c++/11/bits/allocator.h \
@@ -159,20 +173,6 @@ CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/auxiliar.cpp.o: Compor
   /usr/include/c++/11/bits/cxxabi_forced.h \
   /usr/include/c++/11/bits/basic_string.h \
   /usr/include/c++/11/ext/string_conversions.h \
-  /usr/include/c++/11/cstdlib \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/include/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/cstdio \
   /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
@@ -481,19 +481,6 @@ CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/rescatador.cpp.o: Comp
   /usr/include/asm-generic/errno.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
-  include/comportamientos/comportamiento.hpp \
-  /usr/include/c++/11/vector \
-  /usr/include/c++/11/bits/allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
-  /usr/include/c++/11/ext/new_allocator.h \
-  /usr/include/c++/11/bits/stl_construct.h \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
-  /usr/include/c++/11/ext/alloc_traits.h \
-  /usr/include/c++/11/bits/alloc_traits.h \
-  /usr/include/c++/11/bits/stl_vector.h \
-  /usr/include/c++/11/bits/stl_bvector.h \
-  /usr/include/c++/11/bits/vector.tcc \
-  include/motorlib/util.h \
   /usr/include/c++/11/cstdlib \
   /usr/include/stdlib.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
@@ -507,7 +494,20 @@ CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/rescatador.cpp.o: Comp
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/c++/11/bits/std_abs.h
+  /usr/include/c++/11/bits/std_abs.h \
+  include/comportamientos/comportamiento.hpp \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+  /usr/include/c++/11/ext/new_allocator.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/ext/alloc_traits.h \
+  /usr/include/c++/11/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  include/motorlib/util.h
 
 CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/vandalo.cpp.o: Comportamientos_Jugador/vandalo.cpp \
   /usr/include/stdc-predef.h \
@@ -787,24 +787,6 @@ Comportamientos_Jugador/excursionista.cpp:
 
 /usr/include/c++/11/bits/charconv.h:
 
-/usr/include/c++/11/bits/std_abs.h:
-
-/usr/include/alloca.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/usr/include/endian.h:
-
-/usr/include/x86_64-linux-gnu/sys/types.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-/usr/include/stdlib.h:
-
 /usr/include/c++/11/bits/ostream_insert.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
@@ -854,6 +836,26 @@ Comportamientos_Jugador/rescatador.hpp:
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
 /usr/include/c++/11/bits/allocator.h:
+
+/usr/include/c++/11/vector:
+
+include/comportamientos/comportamiento.hpp:
+
+/usr/include/c++/11/bits/std_abs.h:
+
+/usr/include/alloca.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/endian.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/include/c++/11/iosfwd:
 
@@ -914,10 +916,6 @@ Comportamientos_Jugador/vandalo.hpp:
 /usr/include/c++/11/bits/concept_check.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
-/usr/include/c++/11/cstdlib:
-
-/usr/include/c++/11/bits/stl_iterator_base_types.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
@@ -1055,8 +1053,6 @@ Comportamientos_Jugador/auxiliar.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
-/usr/include/c++/11/vector:
-
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
@@ -1123,9 +1119,9 @@ include/motorlib/util.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
-/usr/include/x86_64-linux-gnu/bits/select.h:
-
 /usr/include/c++/11/iostream:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
 
 /usr/include/c++/11/backward/binders.h:
 
@@ -1138,6 +1134,10 @@ include/motorlib/util.h:
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/usr/include/c++/11/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/11/cstdlib:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
@@ -1163,4 +1163,4 @@ include/motorlib/util.h:
 
 /usr/include/asm-generic/errno-base.h:
 
-include/comportamientos/comportamiento.hpp:
+/usr/include/stdlib.h:

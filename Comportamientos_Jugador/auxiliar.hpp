@@ -4,6 +4,7 @@
 #include <chrono>
 #include <time.h>
 #include <thread>
+#include <cstdlib>
 
 #include "comportamientos/comportamiento.hpp"
 
@@ -18,10 +19,16 @@ public:
     giro45Izq = 0;
     mirada_derecha = false;
     mirada_izquierda = false;
+    num_walks = 0;
+    aleatorio = rand() % 5; //Busco generar un numero aleatorio entre 3 y 5
+    if(aleatorio == 0) aleatorio+=3;
+    else if(aleatorio == 1) aleatorio += 2;
+    else if(aleatorio == 2) aleatorio += 1;
     mirada_izquierda_atras = false;
     mirada_derecha_atras = false;
     marcha_atras = false;
     recorrido.resize(100, vector<bool>(100, false));
+
   }
   ComportamientoAuxiliar(std::vector<std::vector<unsigned char>> mapaR, std::vector<std::vector<unsigned char>> mapaC) : Comportamiento(mapaR,mapaC)
   {
@@ -45,6 +52,8 @@ private:
     Action last_action;
     bool mirada_izquierda;
     bool mirada_derecha;
+    int aleatorio;
+    int num_walks;
     bool mirada_izquierda_atras;
     bool mirada_derecha_atras;
     bool marcha_atras;

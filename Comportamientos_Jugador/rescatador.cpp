@@ -2,106 +2,212 @@
 #include "motorlib/util.h"
 
 
+double generarNumeroAleatorioR(){
+
+	double prob = static_cast<double>(rand())/RAND_MAX; // genero un numero entre 0.0 y 0.1 que usaré a la hora de evaluar las casillas
+
+	return prob;
+
+}
+
 int VeoCasillaInteresanteR(char i, char c, char d, bool zap){
 
-	if(c == 'X')
-		return 2;
-	else if(i == 'X')
-		return 1;
-	else if(d == 'X')
-		return 3;
-	else if(!zap)
-		if(c == 'D')
+
+	double prob = generarNumeroAleatorioR();
+
+	if(prob < 0.7){
+
+		if(c == 'X')
 			return 2;
-		else if(i == 'D')
+		else if(i == 'X')
 			return 1;
-		else if(d == 'D')
+		else if(d == 'X')
 			return 3;
-	if(c == 'C')
-		return 2;
-	else if(i == 'C')
-		return 1;
-	else if(d == 'C')
-		return 3;
+		else if(!zap){
+			if(c == 'D')
+				return 2;
+			else if(i == 'D')
+				return 1;
+			else if(d == 'D')
+				return 3;
+		}
+		if(c == 'C')
+			return 2;
+		else if(i == 'C')
+			return 1;
+		else if(d == 'C')
+			return 3;
+
+	} else if(prob < 0.85){
+
+		if(d == 'X')
+			return 3;
+		else if(i == 'X')
+			return 1;
+		else if(c == 'X')
+			return 2;
+		else if(!zap){
+			if(d == 'D')
+				return 3;
+			else if(i == 'D')
+				return 1;
+			else if(c == 'D')
+				return 2;
+		}
+		if(d == 'C')
+			return 3;
+		else if(i == 'C')
+			return 1;
+		else if(c == 'C')
+			return 2;
+
+	} else if(prob < 1.0){
+
+		if(i == 'X')
+			return 1;
+		else if(c == 'X')
+			return 2;
+		else if(d == 'X')
+			return 3;
+		else if(!zap){
+			if(i == 'D')
+				return 1;
+			else if(c == 'D')
+				return 2;
+			else if(d == 'D')
+				return 3;
+		}
+		if(i == 'C')
+			return 1;
+		else if(c == 'C')
+			return 2;
+		else if(d == 'C')
+			return 3;
+
+	}
 
 	return 0;
 }
 
-/*int VeoCasillaInteresanteR_nivel1(char i, char c, char d, bool zap){
-
-	if(c == 'X')
-		return 2;
-	else if(i == 'X')
-		return 1;
-	else if(d == 'X')
-		return 3;
-	else if(c == 'D')
-		return 2;
-	else if(i == 'D')
-		return 1;
-	else if(d == 'D')
-		return 3;
-
-	if(c == 'C')
-		return 2;
-	else if(i == 'C')
-		return 1;
-	else if(d == 'C')
-		return 3;
-
-	if(c == 'S')
-		return 2;
-	else if(i == 'S')
-		return 1;
-	else if(d == 'S')
-		return 3;
-
-	if(c == 'T')
-		return 2;
-	else if(i == 'T')
-		return 1;
-	else if(d == 'T')
-		return 3;
-	
-	if(c == 'A')
-		return 2;
-	else if(i == 'A')
-		return 1;
-	else if(d == 'A')
-		return 3;
-
-	return 0;
-}*/
-
 int VeoCasillaInteresanteR_nivel1(char i, char c, char d, bool zap){
 
-	if(c == 'X')
-		return 2;
-	else if(i == 'X')
-		return 1;
-	else if(d == 'X')
-		return 3;
+	double prob = generarNumeroAleatorioR();
 
-	if(c == 'D')
-		return 2;
-	else if(i == 'D')
-		return 1;
-	else if(d == 'D')
-		return 3;
+	if(prob < 0.8){
 
-	if(c == 'C')
-		return 2;
-	else if(i == 'C')
-		return 1;
-	else if(d == 'C')
-		return 3;
-
-	if(c == 'S')
-		return 2;
-	else if(i == 'S')
-		return 1;
-	else if(d == 'S')
-		return 3;
+		// Orden: c, i, d
+		if(c == 'X') return 2;
+		else if(i == 'X') return 1;
+		else if(d == 'X') return 3;
+	
+		if(c == 'D') return 2;
+		else if(i == 'D') return 1;
+		else if(d == 'D') return 3;
+	
+		if(c == 'C') return 2;
+		else if(i == 'C') return 1;
+		else if(d == 'C') return 3;
+	
+		if(c == 'S') return 2;
+		else if(i == 'S') return 1;
+		else if(d == 'S') return 3;
+	
+	} else if(prob < 0.84){
+	
+		// Orden: c, d, i
+		if(c == 'X') return 2;
+		else if(d == 'X') return 3;
+		else if(i == 'X') return 1;
+	
+		if(c == 'D') return 2;
+		else if(d == 'D') return 3;
+		else if(i == 'D') return 1;
+	
+		if(c == 'C') return 2;
+		else if(d == 'C') return 3;
+		else if(i == 'C') return 1;
+	
+		if(c == 'S') return 2;
+		else if(d == 'S') return 3;
+		else if(i == 'S') return 1;
+	
+	} else if(prob < 0.88){
+	
+		// Orden: d, i, c
+		if(d == 'X') return 3;
+		else if(i == 'X') return 1;
+		else if(c == 'X') return 2;
+	
+		if(d == 'D') return 3;
+		else if(i == 'D') return 1;
+		else if(c == 'D') return 2;
+	
+		if(d == 'C') return 3;
+		else if(i == 'C') return 1;
+		else if(c == 'C') return 2;
+	
+		if(d == 'S') return 3;
+		else if(i == 'S') return 1;
+		else if(c == 'S') return 2;
+	
+	} else if(prob < 0.92){
+	
+		// Orden: d, c, i
+		if(d == 'X') return 3;
+		else if(c == 'X') return 2;
+		else if(i == 'X') return 1;
+	
+		if(d == 'D') return 3;
+		else if(c == 'D') return 2;
+		else if(i == 'D') return 1;
+	
+		if(d == 'C') return 3;
+		else if(c == 'C') return 2;
+		else if(i == 'C') return 1;
+	
+		if(d == 'S') return 3;
+		else if(c == 'S') return 2;
+		else if(i == 'S') return 1;
+	
+	} else if(prob < 0.97){
+	
+		// Orden: i, c, d
+		if(i == 'X') return 1;
+		else if(c == 'X') return 2;
+		else if(d == 'X') return 3;
+	
+		if(i == 'D') return 1;
+		else if(c == 'D') return 2;
+		else if(d == 'D') return 3;
+	
+		if(i == 'C') return 1;
+		else if(c == 'C') return 2;
+		else if(d == 'C') return 3;
+	
+		if(i == 'S') return 1;
+		else if(c == 'S') return 2;
+		else if(d == 'S') return 3;
+	
+	} else {
+	
+		// Orden: i, d, c
+		if(i == 'X') return 1;
+		else if(d == 'X') return 3;
+		else if(c == 'X') return 2;
+	
+		if(i == 'D') return 1;
+		else if(d == 'D') return 3;
+		else if(c == 'D') return 2;
+	
+		if(i == 'C') return 1;
+		else if(d == 'C') return 3;
+		else if(c == 'C') return 2;
+	
+		if(i == 'S') return 1;
+		else if(d == 'S') return 3;
+		else if(c == 'S') return 2;
+	}
+	
 
 	return 0;
 }
@@ -170,141 +276,117 @@ int VeoCasillaDisponibleR(char i, char c, char d, bool zap, int posF, int posC, 
 
 	}
 
-	if(c == 'X' && !cent)
-		return 2;
-	else if(i == 'X' && !izq)
-		return 1;
-	else if(d == 'X' && !der)
-		return 3;
-	else if(!zap)
-		if(c == 'D' && !cent)
-			return 2;
-		else if(i == 'D' && !izq)
-			return 1;
-		else if(d == 'D' && !der)
-			return 3;
+	double prob = generarNumeroAleatorioR();
 
-	if(c == 'C' && !cent)
-		return 2;
-	else if(i == 'C' && !izq)
-		return 1;
-	else if(d == 'C' && !der)
-		return 3;
+	if(prob < 0.8){
+
+		// Orden: c, i, d
+		if(c == 'X' && !cent) return 2;
+		else if(i == 'X' && !izq) return 1;
+		else if(d == 'X' && !der) return 3;
+
+		if(!zap){
+			if(c == 'D' && !cent) return 2;
+			else if(i == 'D' && !izq) return 1;
+			else if(d == 'D' && !der) return 3;
+		}
+	
+		if(c == 'C' && !cent) return 2;
+		else if(i == 'C' && !izq) return 1;
+		else if(d == 'C' && !der) return 3;
+	
+	} else if(prob < 0.84){
+	
+		// Orden: c, d, i
+		if(c == 'X' && !cent) return 2;
+		else if(d == 'X' && !der) return 3;
+		else if(i == 'X' && !izq) return 1;
+		
+		if(!zap){
+			if(c == 'D' && !cent) return 2;
+			else if(d == 'D' && !der) return 3;
+			else if(i == 'D' && !izq) return 1;
+		}
+	
+		if(c == 'C' && !cent) return 2;
+		else if(d == 'C' && !der) return 3;
+		else if(i == 'C' && !izq) return 1;
+	
+	} else if(prob < 0.88){
+	
+		// Orden: d, i, c
+		if(d == 'X'&& !der) return 3;
+		else if(i == 'X' && !izq) return 1;
+		else if(c == 'X' && !cent) return 2;
+	
+		if(!zap){
+			if(d == 'D' && !der) return 3;
+			else if(i == 'D' && !izq) return 1;
+			else if(c == 'D' && !cent) return 2;
+		}
+	
+		if(d == 'C' && !der) return 3;
+		else if(i == 'C' && !izq) return 1;
+		else if(c == 'C' && !cent) return 2;
+	
+	
+	} else if(prob < 0.92){
+	
+		// Orden: d, c, i
+		if(d == 'X' && !der) return 3;
+		else if(c == 'X' && !cent) return 2;
+		else if(i == 'X' && !izq) return 1;
+	
+		if(!zap){
+			if(d == 'D' && !der) return 3;
+			else if(c == 'D' && !cent) return 2;
+			else if(i == 'D' && !izq) return 1;
+		}
+	
+		if(d == 'C' && !der) return 3;
+		else if(c == 'C' && !cent) return 2;
+		else if(i == 'C' && !izq) return 1;
+	
+	
+	} else if(prob < 0.97){
+	
+		// Orden: i, c, d
+		if(i == 'X' && !izq) return 1;
+		else if(c == 'X' && !cent) return 2;
+		else if(d == 'X' && !der) return 3;
+	
+		if(!zap){
+			if(i == 'D' && !izq) return 1;
+			else if(c == 'D' && !cent) return 2;
+			else if(d == 'D' && !der) return 3;
+		}
+	
+		if(i == 'C' && !izq) return 1;
+		else if(c == 'C' && !cent) return 2;
+		else if(d == 'C' && !der) return 3;
+	
+	
+	} else {
+	
+		// Orden: i, d, c
+		if(i == 'X' && !izq) return 1;
+		else if(d == 'X' && !der) return 3;
+		else if(c == 'X' && !cent) return 2;
+	
+		if(!zap){
+			if(i == 'D' && !izq) return 1;
+			else if(d == 'D' && !der) return 3;
+			else if(c == 'D' && !cent) return 2;
+		}
+	
+		if(i == 'C' && !izq) return 1;
+		else if(d == 'C' && !der) return 3;
+		else if(c == 'C' && !cent) return 2;
+	}
 
 	return 0;
 
 }
-
-/*int VeoCasillaDisponibleR_nivel1(char i, char c, char d, bool zap, int posF, int posC, vector<vector<bool>> &m, Orientacion rumbo){
-
-	bool izq, cent, der;
-
-	switch (rumbo){
-
-		case norte:
-			izq = m[posF-1][posC-1];
-			cent = m[posF-1][posC];
-			der = m[posF-1][posC+1];
-			
-			break;
-		
-		case noreste:
-			izq = m[posF-1][posC];
-			cent = m[posF-1][posC+1];
-			der = m[posF][posC+1];
-			
-			break;
-
-		case este:
-			izq = m[posF-1][posC+1];
-			cent = m[posF][posC+1];
-			der = m[posF+1][posC+1];
-			
-			break;
-
-		case sureste:
-			izq = m[posF][posC+1];
-			cent = m[posF+1][posC+1];
-			der = m[posF+1][posC];
-			
-			break;
-	
-		case suroeste:
-			izq = m[posF+1][posC];
-			cent = m[posF+1][posC-1];
-			der = m[posF][posC-1];
-			
-			break;
-
-		case oeste:
-			izq = m[posF+1][posC-1];
-			cent = m[posF][posC-1];
-			der = m[posF-1][posC-1];
-			
-			break;
-
-		case noroeste:
-			izq = m[posF][posC-1];
-			cent = m[posF-1][posC-1];
-			der = m[posF-1][posC];
-				
-			break;
-
-		case sur:
-			izq = m[posF+1][posC+1];
-			cent = m[posF+1][posC];
-			der = m[posF+1][posC-1];
-			
-			break;
-
-	}
-
-	if(c == 'X' && !cent)
-		return 2;
-	else if(i == 'X' && !izq)
-		return 1;
-	else if(d == 'X' && !der)
-		return 3;
-	
-	
-	if(c == 'D' && !cent)
-		return 2;
-	else if(i == 'D' && !izq)
-		return 1;
-	else if(d == 'D' && !der)
-		return 3;
-
-	if(c == 'C' && !cent)
-		return 2;
-	else if(i == 'C' && !izq)
-		return 1;
-	else if(d == 'C' && !der)
-		return 3;
-
-	if(c == 'S' && !cent)
-		return 2;
-	else if(i == 'S' && !izq)
-		return 1;
-	else if(d == 'S' && !der)
-		return 3;
-
-	if(c == 'T' && !cent)
-		return 2;
-	else if(i == 'T' && !izq)
-		return 1;
-	else if(d == 'T' && !der)
-		return 3;
-
-	if(c == 'A' && !cent)
-		return 2;
-	else if(i == 'A' && !izq)
-		return 1;
-	else if(d == 'A' && !der)
-		return 3;
-
-	return 0;
-
-}*/
 
 int VeoCasillaDisponibleR_nivel1(char i, char c, char d, bool zap, int posF, int posC, vector<vector<bool>> &m, Orientacion rumbo){
 
@@ -370,36 +452,124 @@ int VeoCasillaDisponibleR_nivel1(char i, char c, char d, bool zap, int posF, int
 
 	}
 
-	if(c == 'X' && !cent)
-		return 2;
-	else if(i == 'X' && !izq)
-		return 1;
-	else if(d == 'X' && !der)
-		return 3;
+	double prob = generarNumeroAleatorioR();
 
-	if(c == 'D' && !cent)
-		return 2;
-	else if(i == 'D' && !izq)
-		return 1;
-	else if(d == 'D' && !der)
-		return 3;
+	if(prob < 0.8){
 
-	if(c == 'C' && !cent)
-		return 2;
-	else if(i == 'C' && !izq)
-		return 1;
-	else if(d == 'C' && !der)
-		return 3;
-
-	if(c == 'S' && !cent)
-		return 2;
-	else if(i == 'S' && !izq)
-		return 1;
-	else if(d == 'S' && !der)
-		return 3;
+		// Orden: c, i, d
+		if(c == 'X' && !cent) return 2;
+		else if(i == 'X' && !izq) return 1;
+		else if(d == 'X' && !der) return 3;
+	
+		if(c == 'D' && !cent) return 2;
+		else if(i == 'D' && !izq) return 1;
+		else if(d == 'D' && !der) return 3;
+	
+		if(c == 'C' && !cent) return 2;
+		else if(i == 'C' && !izq) return 1;
+		else if(d == 'C' && !der) return 3;
+	
+		if(c == 'S' && !cent) return 2;
+		else if(i == 'S' && !izq) return 1;
+		else if(d == 'S' && !der) return 3;
+	
+	} else if(prob < 0.84){
+	
+		// Orden: c, d, i
+		if(c == 'X' && !cent) return 2;
+		else if(d == 'X' && !der) return 3;
+		else if(i == 'X' && !izq) return 1;
+	
+		if(c == 'D' && !cent) return 2;
+		else if(d == 'D' && !der) return 3;
+		else if(i == 'D' && !izq) return 1;
+	
+		if(c == 'C' && !cent) return 2;
+		else if(d == 'C' && !der) return 3;
+		else if(i == 'C' && !izq) return 1;
+	
+		if(c == 'S' && !cent) return 2;
+		else if(d == 'S' && !der) return 3;
+		else if(i == 'S' && !izq) return 1;
+	
+	} else if(prob < 0.88){
+	
+		// Orden: d, i, c
+		if(d == 'X'&& !der) return 3;
+		else if(i == 'X' && !izq) return 1;
+		else if(c == 'X' && !cent) return 2;
+	
+		if(d == 'D' && !der) return 3;
+		else if(i == 'D' && !izq) return 1;
+		else if(c == 'D' && !cent) return 2;
+	
+		if(d == 'C' && !der) return 3;
+		else if(i == 'C' && !izq) return 1;
+		else if(c == 'C' && !cent) return 2;
+	
+		if(d == 'S' && !der) return 3;
+		else if(i == 'S' && !izq) return 1;
+		else if(c == 'S' && !cent) return 2;
+	
+	} else if(prob < 0.92){
+	
+		// Orden: d, c, i
+		if(d == 'X' && !der) return 3;
+		else if(c == 'X' && !cent) return 2;
+		else if(i == 'X' && !izq) return 1;
+	
+		if(d == 'D' && !der) return 3;
+		else if(c == 'D' && !cent) return 2;
+		else if(i == 'D' && !izq) return 1;
+	
+		if(d == 'C' && !der) return 3;
+		else if(c == 'C' && !cent) return 2;
+		else if(i == 'C' && !izq) return 1;
+	
+		if(d == 'S' && !der) return 3;
+		else if(c == 'S' && !cent) return 2;
+		else if(i == 'S' && !izq) return 1;
+	
+	} else if(prob < 0.97){
+	
+		// Orden: i, c, d
+		if(i == 'X' && !izq) return 1;
+		else if(c == 'X' && !cent) return 2;
+		else if(d == 'X' && !der) return 3;
+	
+		if(i == 'D' && !izq) return 1;
+		else if(c == 'D' && !cent) return 2;
+		else if(d == 'D' && !der) return 3;
+	
+		if(i == 'C' && !izq) return 1;
+		else if(c == 'C' && !cent) return 2;
+		else if(d == 'C' && !der) return 3;
+	
+		if(i == 'S' && !izq) return 1;
+		else if(c == 'S' && !cent) return 2;
+		else if(d == 'S' && !der) return 3;
+	
+	} else {
+	
+		// Orden: i, d, c
+		if(i == 'X' && !izq) return 1;
+		else if(d == 'X' && !der) return 3;
+		else if(c == 'X' && !cent) return 2;
+	
+		if(i == 'D' && !izq) return 1;
+		else if(d == 'D' && !der) return 3;
+		else if(c == 'D' && !cent) return 2;
+	
+		if(i == 'C' && !izq) return 1;
+		else if(d == 'C' && !der) return 3;
+		else if(c == 'C' && !cent) return 2;
+	
+		if(i == 'S' && !izq) return 1;
+		else if(d == 'S' && !der) return 3;
+		else if(c == 'S' && !cent) return 2;
+	}
 
 	return 0;
-
 }
 
 char ViablePorAlturaR(char c, int diff, bool zap){
@@ -560,7 +730,7 @@ Action ComportamientoRescatador::ComportamientoRescatadorNivel_0(Sensores sensor
 		int c = ViablePorAlturaR(sensores.superficie[2], sensores.cota[2] - sensores.cota[0], tiene_zapatillas);
 		int i = ViablePorAlturaR(sensores.superficie[1], sensores.cota[1] - sensores.cota[0], tiene_zapatillas);
 		int d = ViablePorAlturaR(sensores.superficie[3], sensores.cota[3] - sensores.cota[0], tiene_zapatillas);
-
+		
 		int pos = VeoCasillaDisponibleR(i, c, d, tiene_zapatillas, sensores.posF,  sensores.posC, recorrido, sensores.rumbo);
 
 		switch(pos){
@@ -600,7 +770,7 @@ Action ComportamientoRescatador::ComportamientoRescatadorNivel_0(Sensores sensor
 					mirada_derecha = true;
 
 				} else {
-					
+				
 					if(marcha_atras){
 
 						int pos2 = VeoCasillaInteresanteR(i, c, d, tiene_zapatillas);
@@ -660,11 +830,11 @@ Action ComportamientoRescatador::ComportamientoRescatadorNivel_0(Sensores sensor
 
 	}
 
-
     last_action = accion;
 
     return accion;
 }
+
 
 Action ComportamientoRescatador::ComportamientoRescatadorNivel_1(Sensores sensores)
 {
@@ -692,6 +862,7 @@ Action ComportamientoRescatador::ComportamientoRescatadorNivel_1(Sensores sensor
 		int d = ViablePorAlturaR(sensores.superficie[3], sensores.cota[3] - sensores.cota[0], tiene_zapatillas);
 
 		int pos = VeoCasillaDisponibleR_nivel1(i, c, d, tiene_zapatillas, sensores.posF,  sensores.posC, recorrido, sensores.rumbo);
+		
 
 		switch(pos){
 
@@ -730,7 +901,7 @@ Action ComportamientoRescatador::ComportamientoRescatadorNivel_1(Sensores sensor
 					mirada_derecha = true;
 
 				} else {
-					
+
 					if(marcha_atras){
 
 						int pos2 = VeoCasillaInteresanteR_nivel1(i, c, d, tiene_zapatillas);
@@ -759,7 +930,7 @@ Action ComportamientoRescatador::ComportamientoRescatadorNivel_1(Sensores sensor
 								if(!mirada_izquierda_atras){
 
 									accion = TURN_L;
-									mirada_izquierda = true;
+									mirada_izquierda_atras = true;
 				
 								} else if(!mirada_derecha_atras){
 				
@@ -785,7 +956,6 @@ Action ComportamientoRescatador::ComportamientoRescatadorNivel_1(Sensores sensor
 				}
 
 				break;
-
 		}
 
 	}
