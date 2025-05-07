@@ -40,7 +40,7 @@ int VeoCasillaInteresanteA(char i, char c, char d, bool zap){
 
 	double prob = generarNumeroAleatorioA();
 
-	if(prob < 0.7){
+	if(prob < 0.9){
 
 		if(c == 'X')
 			return 2;
@@ -63,7 +63,7 @@ int VeoCasillaInteresanteA(char i, char c, char d, bool zap){
 		else if(d == 'C')
 			return 3;
 
-	} else if(prob < 0.85){
+	} else if(prob < 0.95){
 
 		if(d == 'X')
 			return 3;
@@ -118,7 +118,7 @@ int VeoCasillaInteresanteA_nivel1(char i, char c, char d, bool zap){
 
 	double prob = generarNumeroAleatorioA();
 
-	if(prob < 0.8){
+	if(prob < 0.9){
 
 		// Orden: c, i, d
 		if(c == 'X') return 2;
@@ -137,7 +137,7 @@ int VeoCasillaInteresanteA_nivel1(char i, char c, char d, bool zap){
 		else if(i == 'S') return 1;
 		else if(d == 'S') return 3;
 	
-	} else if(prob < 0.84){
+	} else if(prob < 0.92){
 	
 		// Orden: c, d, i
 		if(c == 'X') return 2;
@@ -156,7 +156,7 @@ int VeoCasillaInteresanteA_nivel1(char i, char c, char d, bool zap){
 		else if(d == 'S') return 3;
 		else if(i == 'S') return 1;
 	
-	} else if(prob < 0.88){
+	} else if(prob < 0.94){
 	
 		// Orden: d, i, c
 		if(d == 'X') return 3;
@@ -175,7 +175,7 @@ int VeoCasillaInteresanteA_nivel1(char i, char c, char d, bool zap){
 		else if(i == 'S') return 1;
 		else if(c == 'S') return 2;
 	
-	} else if(prob < 0.92){
+	} else if(prob < 0.97){
 	
 		// Orden: d, c, i
 		if(d == 'X') return 3;
@@ -194,7 +194,7 @@ int VeoCasillaInteresanteA_nivel1(char i, char c, char d, bool zap){
 		else if(c == 'S') return 2;
 		else if(i == 'S') return 1;
 	
-	} else if(prob < 0.97){
+	} else if(prob < 0.99){
 	
 		// Orden: i, c, d
 		if(i == 'X') return 1;
@@ -302,7 +302,7 @@ int VeoCasillaDisponibleA(char i, char c, char d, bool zap, int posF, int posC, 
 
 	double prob = generarNumeroAleatorioA();
 
-	if(prob < 0.8){
+	if(prob < 0.9){
 
 		// Orden: c, i, d
 		if(c == 'X' && !cent) return 2;
@@ -319,7 +319,7 @@ int VeoCasillaDisponibleA(char i, char c, char d, bool zap, int posF, int posC, 
 		else if(i == 'C' && !izq) return 1;
 		else if(d == 'C' && !der) return 3;
 	
-	} else if(prob < 0.84){
+	} else if(prob < 0.92){
 	
 		// Orden: c, d, i
 		if(c == 'X' && !cent) return 2;
@@ -336,7 +336,7 @@ int VeoCasillaDisponibleA(char i, char c, char d, bool zap, int posF, int posC, 
 		else if(d == 'C' && !der) return 3;
 		else if(i == 'C' && !izq) return 1;
 	
-	} else if(prob < 0.88){
+	} else if(prob < 0.94){
 	
 		// Orden: d, i, c
 		if(d == 'X'&& !der) return 3;
@@ -354,7 +354,7 @@ int VeoCasillaDisponibleA(char i, char c, char d, bool zap, int posF, int posC, 
 		else if(c == 'C' && !cent) return 2;
 	
 	
-	} else if(prob < 0.92){
+	} else if(prob < 0.97){
 	
 		// Orden: d, c, i
 		if(d == 'X' && !der) return 3;
@@ -372,7 +372,7 @@ int VeoCasillaDisponibleA(char i, char c, char d, bool zap, int posF, int posC, 
 		else if(i == 'C' && !izq) return 1;
 	
 	
-	} else if(prob < 0.97){
+	} else if(prob < 0.99){
 	
 		// Orden: i, c, d
 		if(i == 'X' && !izq) return 1;
@@ -478,7 +478,7 @@ int VeoCasillaDisponibleA_nivel1(char i, char c, char d, bool zap, int posF, int
 
 	double prob = generarNumeroAleatorioA();
 
-	if(prob < 0.8){
+	if(prob < 0.9){
 
 		// Orden: c, i, d
 		if(c == 'X' && !cent) return 2;
@@ -497,7 +497,7 @@ int VeoCasillaDisponibleA_nivel1(char i, char c, char d, bool zap, int posF, int
 		else if(i == 'S' && !izq) return 1;
 		else if(d == 'S' && !der) return 3;
 	
-	} else if(prob < 0.84){
+	} else if(prob < 0.92){
 	
 		// Orden: c, d, i
 		if(c == 'X' && !cent) return 2;
@@ -516,7 +516,7 @@ int VeoCasillaDisponibleA_nivel1(char i, char c, char d, bool zap, int posF, int
 		else if(d == 'S' && !der) return 3;
 		else if(i == 'S' && !izq) return 1;
 	
-	} else if(prob < 0.88){
+	} else if(prob < 0.94){
 	
 		// Orden: d, i, c
 		if(d == 'X'&& !der) return 3;
@@ -535,7 +535,7 @@ int VeoCasillaDisponibleA_nivel1(char i, char c, char d, bool zap, int posF, int
 		else if(i == 'S' && !izq) return 1;
 		else if(c == 'S' && !cent) return 2;
 	
-	} else if(prob < 0.92){
+	} else if(prob < 0.97){
 	
 		// Orden: d, c, i
 		if(d == 'X' && !der) return 3;
@@ -554,7 +554,7 @@ int VeoCasillaDisponibleA_nivel1(char i, char c, char d, bool zap, int posF, int
 		else if(c == 'S' && !cent) return 2;
 		else if(i == 'S' && !izq) return 1;
 	
-	} else if(prob < 0.97){
+	} else if(prob < 0.99){
 	
 		// Orden: i, c, d
 		if(i == 'X' && !izq) return 1;
@@ -603,7 +603,7 @@ char ViablePorAlturaA(char c, int diff){
 
 }
 
-void SituarSensorEnMapaA(vector<vector<unsigned char>> &m, vector<vector<unsigned char>> &a, Sensores sensores){
+/*void SituarSensorEnMapaA(vector<vector<unsigned char>> &m, vector<vector<unsigned char>> &a, Sensores sensores){
 
 	m[sensores.posF][sensores.posC] = sensores.superficie[0];
 	a[sensores.posF][sensores.posC] = sensores.cota[0];
@@ -694,6 +694,302 @@ void SituarSensorEnMapaA(vector<vector<unsigned char>> &m, vector<vector<unsigne
 	}
 
 
+}*/
+
+void SituarSensorEnMapaA(vector<vector<unsigned char>> &m, vector<vector<unsigned char>> &a, Sensores sensores) {
+    
+    m[sensores.posF][sensores.posC] = sensores.superficie[0];
+    a[sensores.posF][sensores.posC] = sensores.cota[0];
+
+    switch (sensores.rumbo) {
+
+        case norte:
+
+            m[sensores.posF-1][sensores.posC-1] = sensores.superficie[1];
+            m[sensores.posF-1][sensores.posC]   = sensores.superficie[2];
+            m[sensores.posF-1][sensores.posC+1] = sensores.superficie[3];
+            a[sensores.posF-1][sensores.posC-1] = sensores.cota[1];
+            a[sensores.posF-1][sensores.posC]   = sensores.cota[2];
+            a[sensores.posF-1][sensores.posC+1] = sensores.cota[3];
+
+            m[sensores.posF-2][sensores.posC-2] = sensores.superficie[4];
+            m[sensores.posF-2][sensores.posC-1] = sensores.superficie[5];
+            m[sensores.posF-2][sensores.posC]   = sensores.superficie[6];
+            m[sensores.posF-2][sensores.posC+1] = sensores.superficie[7];
+            m[sensores.posF-2][sensores.posC+2] = sensores.superficie[8];
+            a[sensores.posF-2][sensores.posC-2] = sensores.cota[4];
+            a[sensores.posF-2][sensores.posC-1] = sensores.cota[5];
+            a[sensores.posF-2][sensores.posC]   = sensores.cota[6];
+            a[sensores.posF-2][sensores.posC+1] = sensores.cota[7];
+            a[sensores.posF-2][sensores.posC+2] = sensores.cota[8];
+
+            m[sensores.posF-3][sensores.posC-3] = sensores.superficie[9];
+            m[sensores.posF-3][sensores.posC-2] = sensores.superficie[10];
+            m[sensores.posF-3][sensores.posC-1] = sensores.superficie[11];
+            m[sensores.posF-3][sensores.posC]   = sensores.superficie[12];
+            m[sensores.posF-3][sensores.posC+1] = sensores.superficie[13];
+            m[sensores.posF-3][sensores.posC+2] = sensores.superficie[14];
+            m[sensores.posF-3][sensores.posC+3] = sensores.superficie[15];
+            a[sensores.posF-3][sensores.posC-3] = sensores.cota[9];
+            a[sensores.posF-3][sensores.posC-2] = sensores.cota[10];
+            a[sensores.posF-3][sensores.posC-1] = sensores.cota[11];
+            a[sensores.posF-3][sensores.posC]   = sensores.cota[12];
+            a[sensores.posF-3][sensores.posC+1] = sensores.cota[13];
+            a[sensores.posF-3][sensores.posC+2] = sensores.cota[14];
+            a[sensores.posF-3][sensores.posC+3] = sensores.cota[15];
+            break;
+
+        case noreste:
+
+            m[sensores.posF-1][sensores.posC]   = sensores.superficie[1];
+            m[sensores.posF-1][sensores.posC+1] = sensores.superficie[2];
+            m[sensores.posF][sensores.posC+1]   = sensores.superficie[3];
+            a[sensores.posF-1][sensores.posC]   = sensores.cota[1];
+            a[sensores.posF-1][sensores.posC+1] = sensores.cota[2];
+            a[sensores.posF][sensores.posC+1]   = sensores.cota[3];
+
+            m[sensores.posF-2][sensores.posC]   = sensores.superficie[4];
+            m[sensores.posF-2][sensores.posC+1] = sensores.superficie[5];
+            m[sensores.posF-2][sensores.posC+2] = sensores.superficie[6];
+            m[sensores.posF-1][sensores.posC+2]   = sensores.superficie[7];
+            m[sensores.posF][sensores.posC+2] = sensores.superficie[8];
+            a[sensores.posF-2][sensores.posC]   = sensores.cota[4];
+            a[sensores.posF-2][sensores.posC+1] = sensores.cota[5];
+            a[sensores.posF-2][sensores.posC+2] = sensores.cota[6];
+            a[sensores.posF-1][sensores.posC+2]   = sensores.cota[7];
+            a[sensores.posF][sensores.posC+2] = sensores.cota[8];
+
+            m[sensores.posF-3][sensores.posC] = sensores.superficie[9];
+            m[sensores.posF-3][sensores.posC+1] = sensores.superficie[10];
+            m[sensores.posF-3][sensores.posC+2] = sensores.superficie[11];
+            m[sensores.posF-3][sensores.posC+3] = sensores.superficie[12];
+            m[sensores.posF-2][sensores.posC+3]   = sensores.superficie[13];
+            m[sensores.posF-1][sensores.posC+3] = sensores.superficie[14];
+            m[sensores.posF][sensores.posC+3] = sensores.superficie[15];
+			a[sensores.posF-3][sensores.posC] = sensores.cota[9];
+            a[sensores.posF-3][sensores.posC+1] = sensores.cota[10];
+            a[sensores.posF-3][sensores.posC+2] = sensores.cota[11];
+            a[sensores.posF-3][sensores.posC+3] = sensores.cota[12];
+            a[sensores.posF-2][sensores.posC+3]   = sensores.cota[13];
+            a[sensores.posF-1][sensores.posC+3] = sensores.cota[14];
+            a[sensores.posF][sensores.posC+3] = sensores.cota[15];
+            break;
+
+        case este:
+
+            m[sensores.posF-1][sensores.posC+1] = sensores.superficie[1];
+            m[sensores.posF][sensores.posC+1]   = sensores.superficie[2];
+            m[sensores.posF+1][sensores.posC+1] = sensores.superficie[3];
+            a[sensores.posF-1][sensores.posC+1] = sensores.cota[1];
+            a[sensores.posF][sensores.posC+1]   = sensores.cota[2];
+            a[sensores.posF+1][sensores.posC+1] = sensores.cota[3];
+
+            m[sensores.posF-2][sensores.posC+2] = sensores.superficie[4];
+            m[sensores.posF-1][sensores.posC+2] = sensores.superficie[5];
+            m[sensores.posF][sensores.posC+2]   = sensores.superficie[6];
+            m[sensores.posF+1][sensores.posC+2] = sensores.superficie[7];
+            m[sensores.posF+2][sensores.posC+2] = sensores.superficie[8];
+            a[sensores.posF-2][sensores.posC+2] = sensores.cota[4];
+            a[sensores.posF-1][sensores.posC+2] = sensores.cota[5];
+            a[sensores.posF][sensores.posC+2]   = sensores.cota[6];
+            a[sensores.posF+1][sensores.posC+2] = sensores.cota[7];
+            a[sensores.posF+2][sensores.posC+2] = sensores.cota[8];
+
+            m[sensores.posF-3][sensores.posC+3] = sensores.superficie[9];
+            m[sensores.posF-2][sensores.posC+3] = sensores.superficie[10];
+            m[sensores.posF-1][sensores.posC+3] = sensores.superficie[11];
+            m[sensores.posF][sensores.posC+3]   = sensores.superficie[12];
+            m[sensores.posF+1][sensores.posC+3] = sensores.superficie[13];
+            m[sensores.posF+2][sensores.posC+3] = sensores.superficie[14];
+            m[sensores.posF+3][sensores.posC+3] = sensores.superficie[15];
+            a[sensores.posF-3][sensores.posC+3] = sensores.cota[9];
+            a[sensores.posF-2][sensores.posC+3] = sensores.cota[10];
+            a[sensores.posF-1][sensores.posC+3] = sensores.cota[11];
+            a[sensores.posF][sensores.posC+3]   = sensores.cota[12];
+            a[sensores.posF+1][sensores.posC+3] = sensores.cota[13];
+            a[sensores.posF+2][sensores.posC+3] = sensores.cota[14];
+            a[sensores.posF+3][sensores.posC+3] = sensores.cota[15];
+            break;
+
+        case sureste:
+            m[sensores.posF][sensores.posC+1]   = sensores.superficie[1];
+            m[sensores.posF+1][sensores.posC+1] = sensores.superficie[2];
+            m[sensores.posF+1][sensores.posC]   = sensores.superficie[3];
+            a[sensores.posF][sensores.posC+1]   = sensores.cota[1];
+            a[sensores.posF+1][sensores.posC+1] = sensores.cota[2];
+            a[sensores.posF+1][sensores.posC]   = sensores.cota[3];
+
+            m[sensores.posF][sensores.posC+2] = sensores.superficie[4];
+            m[sensores.posF+1][sensores.posC+2] = sensores.superficie[5];
+            m[sensores.posF+2][sensores.posC+2]   = sensores.superficie[6];
+            m[sensores.posF+2][sensores.posC+1] = sensores.superficie[7];
+            m[sensores.posF+2][sensores.posC]   = sensores.superficie[8];
+			a[sensores.posF][sensores.posC+2] = sensores.cota[4];
+            a[sensores.posF+1][sensores.posC+2] = sensores.cota[5];
+            a[sensores.posF+2][sensores.posC+2]   = sensores.cota[6];
+            a[sensores.posF+2][sensores.posC+1] = sensores.cota[7];
+            a[sensores.posF+2][sensores.posC]   = sensores.cota[8];
+
+            m[sensores.posF][sensores.posC+3] = sensores.superficie[9];
+            m[sensores.posF+1][sensores.posC+3] = sensores.superficie[10];
+            m[sensores.posF+2][sensores.posC+3] = sensores.superficie[11];
+            m[sensores.posF+3][sensores.posC+3]   = sensores.superficie[12];
+            m[sensores.posF+3][sensores.posC+2] = sensores.superficie[13];
+            m[sensores.posF+3][sensores.posC+1] = sensores.superficie[14];
+            m[sensores.posF+3][sensores.posC]   = sensores.superficie[15];
+            a[sensores.posF][sensores.posC+3] = sensores.cota[9];
+            a[sensores.posF+1][sensores.posC+3] = sensores.cota[10];
+            a[sensores.posF+2][sensores.posC+3] = sensores.cota[11];
+            a[sensores.posF+3][sensores.posC+3]   = sensores.cota[12];
+            a[sensores.posF+3][sensores.posC+2] = sensores.cota[13];
+            a[sensores.posF+3][sensores.posC+1] = sensores.cota[14];
+            a[sensores.posF+3][sensores.posC]   = sensores.cota[15];
+            break;
+
+        case sur:
+
+            m[sensores.posF+1][sensores.posC+1] = sensores.superficie[1];
+            m[sensores.posF+1][sensores.posC]   = sensores.superficie[2];
+            m[sensores.posF+1][sensores.posC-1] = sensores.superficie[3];
+            a[sensores.posF+1][sensores.posC+1] = sensores.cota[1];
+            a[sensores.posF+1][sensores.posC]   = sensores.cota[2];
+            a[sensores.posF+1][sensores.posC-1] = sensores.cota[3];
+
+            m[sensores.posF+2][sensores.posC+2] = sensores.superficie[4];
+            m[sensores.posF+2][sensores.posC+1] = sensores.superficie[5];
+            m[sensores.posF+2][sensores.posC]   = sensores.superficie[6];
+            m[sensores.posF+2][sensores.posC-1] = sensores.superficie[7];
+            m[sensores.posF+2][sensores.posC-2] = sensores.superficie[8];
+            a[sensores.posF+2][sensores.posC+2] = sensores.cota[4];
+            a[sensores.posF+2][sensores.posC+1] = sensores.cota[5];
+            a[sensores.posF+2][sensores.posC]   = sensores.cota[6];
+            a[sensores.posF+2][sensores.posC-1] = sensores.cota[7];
+            a[sensores.posF+2][sensores.posC-2] = sensores.cota[8];
+
+            m[sensores.posF+3][sensores.posC+3] = sensores.superficie[9];
+            m[sensores.posF+3][sensores.posC+2] = sensores.superficie[10];
+            m[sensores.posF+3][sensores.posC+1] = sensores.superficie[11];
+            m[sensores.posF+3][sensores.posC]   = sensores.superficie[12];
+            m[sensores.posF+3][sensores.posC-1] = sensores.superficie[13];
+            m[sensores.posF+3][sensores.posC-2] = sensores.superficie[14];
+            m[sensores.posF+3][sensores.posC-3] = sensores.superficie[15];
+            a[sensores.posF+3][sensores.posC+3] = sensores.cota[9];
+            a[sensores.posF+3][sensores.posC+2] = sensores.cota[10];
+            a[sensores.posF+3][sensores.posC+1] = sensores.cota[11];
+            a[sensores.posF+3][sensores.posC]   = sensores.cota[12];
+            a[sensores.posF+3][sensores.posC-1] = sensores.cota[13];
+            a[sensores.posF+3][sensores.posC-2] = sensores.cota[14];
+            a[sensores.posF+3][sensores.posC-3] = sensores.cota[15];
+            break;
+
+        case suroeste:
+
+            m[sensores.posF+1][sensores.posC]   = sensores.superficie[1];
+            m[sensores.posF+1][sensores.posC-1] = sensores.superficie[2];
+            m[sensores.posF][sensores.posC-1]   = sensores.superficie[3];
+            a[sensores.posF+1][sensores.posC]   = sensores.cota[1];
+            a[sensores.posF+1][sensores.posC-1] = sensores.cota[2];
+            a[sensores.posF][sensores.posC-1]   = sensores.cota[3];
+
+            m[sensores.posF+2][sensores.posC]   = sensores.superficie[4];
+            m[sensores.posF+2][sensores.posC-1] = sensores.superficie[5];
+            m[sensores.posF+2][sensores.posC-2] = sensores.superficie[6];
+            m[sensores.posF+1][sensores.posC-2]   = sensores.superficie[7];
+            m[sensores.posF][sensores.posC-2] = sensores.superficie[8];
+			a[sensores.posF+2][sensores.posC]   = sensores.cota[4];
+            a[sensores.posF+2][sensores.posC-1] = sensores.cota[5];
+            a[sensores.posF+2][sensores.posC-2] = sensores.cota[6];
+            a[sensores.posF+1][sensores.posC-2]   = sensores.cota[7];
+            a[sensores.posF][sensores.posC-2] = sensores.cota[8];
+
+            m[sensores.posF+3][sensores.posC]   = sensores.superficie[9];
+            m[sensores.posF+3][sensores.posC-1] = sensores.superficie[10];
+            m[sensores.posF+3][sensores.posC-2] = sensores.superficie[11];
+            m[sensores.posF+3][sensores.posC-3] = sensores.superficie[12];
+            m[sensores.posF+2][sensores.posC-3]   = sensores.superficie[13];
+            m[sensores.posF+1][sensores.posC-3] = sensores.superficie[14];
+            m[sensores.posF][sensores.posC-3] = sensores.superficie[15];
+			a[sensores.posF+3][sensores.posC]   = sensores.cota[9];
+            a[sensores.posF+3][sensores.posC-1] = sensores.cota[10];
+            a[sensores.posF+3][sensores.posC-2] = sensores.cota[11];
+            a[sensores.posF+3][sensores.posC-3] = sensores.cota[12];
+            a[sensores.posF+2][sensores.posC-3]   = sensores.cota[13];
+            a[sensores.posF+1][sensores.posC-3] = sensores.cota[14];
+            a[sensores.posF][sensores.posC-3] = sensores.cota[15];
+            break;
+
+        case oeste:
+
+            m[sensores.posF+1][sensores.posC-1] = sensores.superficie[1];
+            m[sensores.posF][sensores.posC-1]   = sensores.superficie[2];
+            m[sensores.posF-1][sensores.posC-1] = sensores.superficie[3];
+            a[sensores.posF+1][sensores.posC-1] = sensores.cota[1];
+            a[sensores.posF][sensores.posC-1]   = sensores.cota[2];
+            a[sensores.posF-1][sensores.posC-1] = sensores.cota[3];
+
+            m[sensores.posF+2][sensores.posC-2] = sensores.superficie[4];
+            m[sensores.posF+1][sensores.posC-2] = sensores.superficie[5];
+            m[sensores.posF][sensores.posC-2]   = sensores.superficie[6];
+            m[sensores.posF-1][sensores.posC-2] = sensores.superficie[7];
+            m[sensores.posF-2][sensores.posC-2] = sensores.superficie[8];
+            a[sensores.posF+2][sensores.posC-2] = sensores.cota[4];
+            a[sensores.posF+1][sensores.posC-2] = sensores.cota[5];
+            a[sensores.posF][sensores.posC-2]   = sensores.cota[6];
+            a[sensores.posF-1][sensores.posC-2] = sensores.cota[7];
+            a[sensores.posF-2][sensores.posC-2] = sensores.cota[8];
+
+            m[sensores.posF+3][sensores.posC-3] = sensores.superficie[9];
+            m[sensores.posF+2][sensores.posC-3] = sensores.superficie[10];
+            m[sensores.posF+1][sensores.posC-3] = sensores.superficie[11];
+            m[sensores.posF][sensores.posC-3]   = sensores.superficie[12];
+            m[sensores.posF-1][sensores.posC-3] = sensores.superficie[13];
+            m[sensores.posF-2][sensores.posC-3] = sensores.superficie[14];
+            m[sensores.posF-3][sensores.posC-3] = sensores.superficie[15];
+            a[sensores.posF+3][sensores.posC-3] = sensores.cota[9];
+            a[sensores.posF+2][sensores.posC-3] = sensores.cota[10];
+            a[sensores.posF+1][sensores.posC-3] = sensores.cota[11];
+            a[sensores.posF][sensores.posC-3]   = sensores.cota[12];
+            a[sensores.posF-1][sensores.posC-3] = sensores.cota[13];
+            a[sensores.posF-2][sensores.posC-3] = sensores.cota[14];
+            a[sensores.posF-3][sensores.posC-3] = sensores.cota[15];
+            break;
+
+        case noroeste:
+
+            m[sensores.posF][sensores.posC-1]   = sensores.superficie[1];
+            m[sensores.posF-1][sensores.posC-1] = sensores.superficie[2];
+            m[sensores.posF-1][sensores.posC]   = sensores.superficie[3];
+            a[sensores.posF][sensores.posC-1]   = sensores.cota[1];
+            a[sensores.posF-1][sensores.posC-1] = sensores.cota[2];
+            a[sensores.posF-1][sensores.posC]   = sensores.cota[3];
+
+            m[sensores.posF][sensores.posC-2]   = sensores.superficie[4];
+            m[sensores.posF-1][sensores.posC-2] = sensores.superficie[5];
+            m[sensores.posF-2][sensores.posC-2] = sensores.superficie[6];
+            m[sensores.posF-2][sensores.posC-1]   = sensores.superficie[7];
+            m[sensores.posF-2][sensores.posC] = sensores.superficie[8];
+			a[sensores.posF][sensores.posC-2]   = sensores.cota[4];
+            a[sensores.posF-1][sensores.posC-2] = sensores.cota[5];
+            a[sensores.posF-2][sensores.posC-2] = sensores.cota[6];
+            a[sensores.posF-2][sensores.posC-1]   = sensores.cota[7];
+            a[sensores.posF-2][sensores.posC] = sensores.cota[8];
+
+            m[sensores.posF][sensores.posC-3]   = sensores.superficie[9];
+            m[sensores.posF-1][sensores.posC-3] = sensores.superficie[10];
+            m[sensores.posF-2][sensores.posC-3] = sensores.superficie[11];
+            m[sensores.posF-3][sensores.posC-3] = sensores.superficie[12];
+            m[sensores.posF-3][sensores.posC-2]   = sensores.superficie[13];
+            m[sensores.posF-3][sensores.posC-1] = sensores.superficie[14];
+            m[sensores.posF-3][sensores.posC] = sensores.superficie[15];
+			a[sensores.posF][sensores.posC-3]   = sensores.cota[9];
+            a[sensores.posF-1][sensores.posC-3] = sensores.cota[10];
+            a[sensores.posF-2][sensores.posC-3] = sensores.cota[11];
+            a[sensores.posF-3][sensores.posC-3] = sensores.cota[12];
+            a[sensores.posF-3][sensores.posC-2]   = sensores.cota[13];
+            a[sensores.posF-3][sensores.posC-1] = sensores.cota[14];
+            a[sensores.posF-3][sensores.posC] = sensores.cota[15];
+            break;
+    }
 }
 
 int ComportamientoAuxiliar::interact(Action accion, int valor)
@@ -728,14 +1024,13 @@ Action ComportamientoAuxiliar::ComportamientoAuxiliarNivel_0(Sensores sensores)
 		int i = ViablePorAlturaA(sensores.superficie[1], sensores.cota[1] - sensores.cota[0]);
 		int d = ViablePorAlturaA(sensores.superficie[3], sensores.cota[3] - sensores.cota[0]);
 
-		int pos = VeoCasillaInteresanteA(i, c, d, tiene_zapatillas);
+		int pos = VeoCasillaDisponibleA(i, c, d, tiene_zapatillas, sensores.posF, sensores.posC, recorrido, sensores.rumbo);
 
 		switch(pos){
 
 			case 2:
 				if(sensores.agentes[2] == '_'){
 					accion = WALK;
-					num_walks++;
 					mirada_derecha = false;
 					mirada_izquierda = false;
 				}
@@ -761,21 +1056,18 @@ Action ComportamientoAuxiliar::ComportamientoAuxiliarNivel_0(Sensores sensores)
 			
 			default:
 
-				if(!mirada_izquierda){
 
+				if(num_giros < 6){
+							
 					accion = TURN_SR;
-					giro45Izq = 5;
-					mirada_izquierda = true;
-
-				} else if(!mirada_derecha){
-
-					accion = TURN_SR;
-					giro45Izq = 3;
-					mirada_derecha = true;
+					num_giros++;
+					if(num_giros == 3){
+						num_giros+=3;
+						giro45Izq+=3;
+					}
 
 				} else {
 
-					
 					if(marcha_atras){
 
 						int pos2 = VeoCasillaInteresanteA(i, c, d, tiene_zapatillas);
@@ -784,6 +1076,7 @@ Action ComportamientoAuxiliar::ComportamientoAuxiliarNivel_0(Sensores sensores)
 							case 2:
 								if(sensores.agentes[2] == '_'){
 									accion = WALK;
+									num_giros2 = 0;
 									mirada_derecha_atras = false;
 									mirada_izquierda_atras = false;
 								}
@@ -803,22 +1096,19 @@ Action ComportamientoAuxiliar::ComportamientoAuxiliarNivel_0(Sensores sensores)
 								break;
 
 							default:
-								if(!mirada_izquierda_atras){
-
+								if(num_giros2 < 6){
+							
 									accion = TURN_SR;
-									giro45Izq = 5;
-									mirada_izquierda = true;
-				
-								} else if(!mirada_derecha_atras){
-				
-									accion = TURN_SR;
-									giro45Izq = 3;
-									mirada_derecha_atras = true;
+									num_giros2++;
+									if(num_giros2 == 3){
+										num_giros2+=3;
+										giro45Izq+=3;
+									}
 
 								} else{
 									
 									accion = TURN_SR;
-									giro45Izq = 1;
+									giro45Izq = 5;
 
 								}
 								break;
@@ -826,13 +1116,12 @@ Action ComportamientoAuxiliar::ComportamientoAuxiliarNivel_0(Sensores sensores)
 						}
 					} else {
 						accion = TURN_SR;
-						giro45Izq = 1;
+						giro45Izq = 5;
 						marcha_atras = true;
 					}
 				}
-				
 
-				break;
+			break;
 		}
 
 	}
@@ -853,8 +1142,7 @@ Action ComportamientoAuxiliar::ComportamientoAuxiliarNivel_1(Sensores sensores)
 
 	if(last_action == WALK){
 
-		mirada_derecha = false;
-		mirada_izquierda = false;
+		num_giros = 0;
 
 	}
 
@@ -880,10 +1168,11 @@ Action ComportamientoAuxiliar::ComportamientoAuxiliarNivel_1(Sensores sensores)
 			case 2:
 				if(sensores.agentes[2] == '_')
 					accion = WALK;
-				else
+				else{
 
 					accion = TURN_SR;
 					giro45Izq = 5;
+				}
 
 				break;
 
@@ -898,20 +1187,17 @@ Action ComportamientoAuxiliar::ComportamientoAuxiliarNivel_1(Sensores sensores)
 			
 			default:
 
-				if(!mirada_izquierda){
-
+				if(num_giros < 6){
+						
 					accion = TURN_SR;
-					giro45Izq = 5;
-					mirada_izquierda = true;
-
-				} else if(!mirada_derecha){
-
-					accion = TURN_SR;
-					giro45Izq = 3;
-					mirada_derecha = true;
+					num_giros++;
+					if(num_giros == 3){
+						num_giros+=3;
+						giro45Izq+=3;
+					}
 
 				} else {
-					
+
 					if(marcha_atras){
 
 						int pos2 = VeoCasillaInteresanteA_nivel1(i, c, d, tiene_zapatillas);
@@ -920,6 +1206,7 @@ Action ComportamientoAuxiliar::ComportamientoAuxiliarNivel_1(Sensores sensores)
 							case 2:
 								if(sensores.agentes[2] == '_'){
 									accion = WALK;
+									num_giros2 = 0;
 									mirada_derecha_atras = false;
 									mirada_izquierda_atras = false;
 								}
@@ -939,22 +1226,19 @@ Action ComportamientoAuxiliar::ComportamientoAuxiliarNivel_1(Sensores sensores)
 								break;
 
 							default:
-								if(!mirada_izquierda_atras){
-
+								if(num_giros2 < 6){
+							
 									accion = TURN_SR;
-									giro45Izq = 5;
-									mirada_izquierda = true;
-				
-								} else if(!mirada_derecha_atras){
-				
-									accion = TURN_SR;
-									giro45Izq = 3;
-									mirada_derecha_atras = true;
+									num_giros2++;
+									if(num_giros2 == 3){
+										num_giros2+=3;
+										giro45Izq+=3;
+									}
 
 								} else{
 									
 									accion = TURN_SR;
-									giro45Izq = 1;
+									giro45Izq = 5;
 
 								}
 								break;
@@ -962,12 +1246,12 @@ Action ComportamientoAuxiliar::ComportamientoAuxiliarNivel_1(Sensores sensores)
 						}
 					} else {
 						accion = TURN_SR;
-						giro45Izq = 1;
+						giro45Izq = 5;
 						marcha_atras = true;
 					}
 				}
 
-				break;
+			break;
 		}
 
 	}

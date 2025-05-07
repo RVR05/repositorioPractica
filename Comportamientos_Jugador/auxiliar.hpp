@@ -19,7 +19,8 @@ public:
     giro45Izq = 0;
     mirada_derecha = false;
     mirada_izquierda = false;
-    num_walks = 0;
+    num_giros = 0;
+    num_giros2 = 0;
     aleatorio = rand() % 5; //Busco generar un numero aleatorio entre 3 y 5
     if(aleatorio == 0) aleatorio+=3;
     else if(aleatorio == 1) aleatorio += 2;
@@ -53,7 +54,8 @@ private:
     bool mirada_izquierda;
     bool mirada_derecha;
     int aleatorio;
-    int num_walks;
+    int num_giros;
+    int num_giros2;
     bool mirada_izquierda_atras;
     bool mirada_derecha_atras;
     bool marcha_atras;
