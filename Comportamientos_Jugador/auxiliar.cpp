@@ -9,16 +9,19 @@ Action ComportamientoAuxiliar::think(Sensores sensores)
 	switch (sensores.nivel)
 	{
 	case 0:
-		accion = ComportamientoAuxiliarNivel_0 (sensores);
+		//accion = ComportamientoAuxiliarNivel_0 (sensores);
 		break;
 	case 1:
-		accion = ComportamientoAuxiliarNivel_1 (sensores);
+		//accion = ComportamientoAuxiliarNivel_1 (sensores);
 		break;
 	case 2:
-		// accion = ComportamientoAuxiliarNivel_2 (sensores);
+		accion = IDLE;
+		//accion = ComportamientoAuxiliarNivel_2 (sensores);
 		break;
 	case 3:
-		// accion = ComportamientoAuxiliarNivel_3 (sensores);
+		accion = IDLE;
+		//accion = ComportamientoAuxiliarNivel_3 (sensores);
+		//accion = ComportamientoAuxiliarNivel_E(sensores);
 		break;
 	case 4:
 		// accion = ComportamientoAuxiliarNivel_4 (sensores);
@@ -27,6 +30,8 @@ Action ComportamientoAuxiliar::think(Sensores sensores)
 
 	return accion;
 }
+
+////////////////////////////////////// NIVEL 0 y 1
 
 double generarNumeroAleatorioA(){
 
@@ -603,99 +608,6 @@ char ViablePorAlturaA(char c, int diff){
 
 }
 
-/*void SituarSensorEnMapaA(vector<vector<unsigned char>> &m, vector<vector<unsigned char>> &a, Sensores sensores){
-
-	m[sensores.posF][sensores.posC] = sensores.superficie[0];
-	a[sensores.posF][sensores.posC] = sensores.cota[0];
-
-	int pos = 1;
-	switch (sensores.rumbo){
-
-		case norte:
-			m[sensores.posF-1][sensores.posC-1] = sensores.superficie[1];
-			m[sensores.posF-1][sensores.posC] = sensores.superficie[2];
-			m[sensores.posF-1][sensores.posC+1] = sensores.superficie[3];
-			a[sensores.posF-1][sensores.posC-1] = sensores.cota[1];
-			a[sensores.posF-1][sensores.posC] = sensores.cota[2];
-			a[sensores.posF-1][sensores.posC+1] = sensores.cota[3];
-			
-			break;
-		
-		case noreste:
-			m[sensores.posF-1][sensores.posC] = sensores.superficie[1];
-			m[sensores.posF-1][sensores.posC+1] = sensores.superficie[2];
-			m[sensores.posF][sensores.posC+1] = sensores.superficie[3];
-			a[sensores.posF-1][sensores.posC] = sensores.cota[1];
-			a[sensores.posF-1][sensores.posC+1] = sensores.cota[2];
-			a[sensores.posF][sensores.posC+1] = sensores.cota[3];
-			
-			break;
-
-		case este:
-			m[sensores.posF-1][sensores.posC+1] = sensores.superficie[1];
-			m[sensores.posF][sensores.posC+1] = sensores.superficie[2];
-			m[sensores.posF+1][sensores.posC+1] = sensores.superficie[3];
-			a[sensores.posF-1][sensores.posC+1] = sensores.cota[1];
-			a[sensores.posF][sensores.posC+1] = sensores.cota[2];
-			a[sensores.posF+1][sensores.posC+1] = sensores.cota[3];
-			
-			break;
-
-		case sureste:
-			m[sensores.posF][sensores.posC+1] = sensores.superficie[1];
-			m[sensores.posF+1][sensores.posC+1] = sensores.superficie[2];
-			m[sensores.posF+1][sensores.posC] = sensores.superficie[3];
-			a[sensores.posF][sensores.posC+1] = sensores.cota[1];
-			a[sensores.posF+1][sensores.posC+1] = sensores.cota[2];
-			a[sensores.posF+1][sensores.posC] = sensores.cota[3];
-			
-			break;
-	
-		case suroeste:
-			m[sensores.posF+1][sensores.posC] = sensores.superficie[1];
-			m[sensores.posF+1][sensores.posC-1] = sensores.superficie[2];
-			m[sensores.posF][sensores.posC-1] = sensores.superficie[3];
-			a[sensores.posF+1][sensores.posC] = sensores.cota[1];
-			a[sensores.posF+1][sensores.posC-1] = sensores.cota[2];
-			a[sensores.posF][sensores.posC-1] = sensores.cota[3];
-			
-			break;
-
-		case oeste:
-			m[sensores.posF+1][sensores.posC-1] = sensores.superficie[1];
-			m[sensores.posF][sensores.posC-1] = sensores.superficie[2];
-			m[sensores.posF-1][sensores.posC-1] = sensores.superficie[3];
-			a[sensores.posF+1][sensores.posC-1] = sensores.cota[1];
-			a[sensores.posF][sensores.posC-1] = sensores.cota[2];
-			a[sensores.posF-1][sensores.posC-1] = sensores.cota[3];
-			
-			break;
-
-		case noroeste:
-			m[sensores.posF][sensores.posC-1] = sensores.superficie[1];
-			m[sensores.posF-1][sensores.posC-1] = sensores.superficie[2];
-			m[sensores.posF-1][sensores.posC] = sensores.superficie[3];
-			a[sensores.posF][sensores.posC-1] = sensores.cota[1];
-			a[sensores.posF-1][sensores.posC-1] = sensores.cota[2];
-			a[sensores.posF-1][sensores.posC] = sensores.cota[3];
-			
-			break;
-
-		case sur:
-			m[sensores.posF+1][sensores.posC+1] = sensores.superficie[1];
-			m[sensores.posF+1][sensores.posC] = sensores.superficie[2];
-			m[sensores.posF+1][sensores.posC-1] = sensores.superficie[3];
-			a[sensores.posF+1][sensores.posC+1] = sensores.cota[1];
-			a[sensores.posF+1][sensores.posC] = sensores.cota[2];
-			a[sensores.posF+1][sensores.posC-1] = sensores.cota[3];
-			
-			break;
-
-	}
-
-
-}*/
-
 void SituarSensorEnMapaA(vector<vector<unsigned char>> &m, vector<vector<unsigned char>> &a, Sensores sensores) {
     
     m[sensores.posF][sensores.posC] = sensores.superficie[0];
@@ -992,9 +904,399 @@ void SituarSensorEnMapaA(vector<vector<unsigned char>> &m, vector<vector<unsigne
     }
 }
 
+///////////////////////////////////////
+
 int ComportamientoAuxiliar::interact(Action accion, int valor)
 {
 	return 0;
+}
+
+/////////////////////////////////////// NIVEL 2 Y 3
+
+void AnularMatrizA(vector<vector<unsigned char>> &m){
+	for (int i = 0; i < m[0].size(); i++)
+	{
+		for (int j = 0; j < m.size(); j++)
+		{
+			m[i][j] = 0;
+		}
+	}
+}
+
+void ComportamientoAuxiliar::VisualizaPlanA(const EstadoA &st, const list<Action> &plan){
+	AnularMatrizA(mapaConPlan);
+	EstadoA cst = st;
+	auto it = plan.begin();
+	while (it != plan.end())
+	{
+		switch (*it)
+		{
+			case WALK:
+				switch (cst.brujula)
+				{
+					case 0:
+						cst.f--;
+					break;
+					case 1:
+						cst.f--;
+						cst.c++;
+					break;
+					case 2:
+						cst.c++;
+					break;
+					case 3:
+						cst.f++;
+						cst.c++;
+					break;
+					case 4:
+						cst.f++;
+					break;
+					case 5:
+						cst.f++;
+						cst.c--;
+					break;
+					case 6:
+						cst.c--;
+					break;
+					case 7:
+						cst.f--;
+						cst.c--;
+					break;
+				}
+				mapaConPlan[cst.f][cst.c] = 2;
+				break;
+			case TURN_SR:
+				cst.brujula = (cst.brujula + 1) % 8;
+				break;
+		}
+			it++;
+	}
+}
+
+EstadoA NextCasillaAuxiliar(const EstadoA &st){
+	EstadoA siguiente = st;
+	switch (st.brujula)
+	{
+	case norte:
+	siguiente.f = st.f - 1;
+	break;
+	case noreste:
+	siguiente.f = st.f - 1;
+	siguiente.c = st.c + 1;
+	break;
+	case este:
+	siguiente.c = st.c + 1;
+	break;
+	case sureste:
+	siguiente.f = st.f + 1;
+	siguiente.c = st.c + 1;
+	break;
+	case sur:
+	siguiente.f = st.f + 1;
+	break;
+	case suroeste:
+	siguiente.f = st.f + 1;
+	siguiente.c = st.c - 1;
+	break;
+	case oeste:
+	siguiente.c = st.c - 1;
+	break;
+	case noroeste:
+	siguiente.f = st.f - 1;
+	siguiente.c = st.c - 1;
+	}
+	return siguiente;
+	}
+
+bool CasillaAccesibleAuxiliar(const EstadoA &st, const vector<vector<unsigned char>> &terreno,
+	const vector<vector<unsigned char>> &altura){
+	EstadoA next = NextCasillaAuxiliar(st);
+	bool check1 = false, check2 = false, check3 = false;
+	check1 = terreno[next.f][next.c] != 'P' and terreno[next.f][next.c] != 'M';
+	check2 = terreno[next.f][next.c] != 'B' or (terreno[next.f][next.c] == 'B' and
+	st.zapatillas);
+	check3 = abs(altura[next.f][next.c] - altura[st.f][st.c]) <= 1;
+	return check1 and check2 and check3;
+}
+
+EstadoA applyA(Action accion, const EstadoA & st, const vector<vector<unsigned char>> &terreno,
+	const vector<vector<unsigned char>> &altura){
+	EstadoA next = st;
+	switch(accion){
+	case WALK:
+	if (CasillaAccesibleAuxiliar(st,terreno,altura)){
+	next = NextCasillaAuxiliar(st);
+	}
+	break;
+	case TURN_SR:
+	next.brujula = (next.brujula+1)%8;
+	break;
+	}
+	return next;
+	}
+
+bool Find (const NodoA & st, const list<NodoA> &lista){
+	auto it = lista.begin();
+	while (it != lista.end() and !((*it) == st)){
+		it++;
+	}
+	return (it != lista.end());
+}
+
+int CalculaCosteA(int i, int j, int newI, int newJ, bool zapatillas, Action accion, vector<vector<unsigned char>> &terreno, vector<vector<unsigned char>> &altura){
+
+	int coste = 0;
+
+	char tipo = terreno[newI][newJ];
+
+	if(accion == WALK){
+		
+		if(altura[i][j] > altura[newI][newJ]){
+
+			switch (tipo){
+
+				case 'A':
+					coste = 110;
+				break;
+
+				case 'T':
+					coste = 25;
+				break;
+
+				case 'S':
+					coste = 3;
+				break;
+				
+				default:
+					coste = 1;
+				break;
+
+			};
+
+		} else if(altura[i][j] < altura[newI][newJ]){
+
+			switch (tipo){
+
+				case 'A':
+					coste = 90;
+				break;
+
+				case 'T':
+					coste = 15;
+				break;
+
+				case 'S':
+					coste = 1;
+				break;
+				
+				default:
+					coste = 1;
+				break;
+
+			};
+			
+		} else {
+
+			switch (tipo){
+
+				case 'A':
+					coste = 100;
+				break;
+
+				case 'T':
+					coste = 20;
+				break;
+
+				case 'S':
+					coste = 2;
+				break;
+				
+				default:
+					coste = 1;
+				break;
+
+			};
+
+		}
+
+	} else if (accion == TURN_SR){
+
+		switch (tipo){
+
+			case 'A':
+				coste = 16;
+			break;
+
+			case 'T':
+				coste = 3;
+			break;
+
+			case 'S':
+				coste = 1;
+			break;
+				
+			default:
+				coste = 1;
+				break;
+		};
+
+	}
+
+}
+
+list<Action> avanzaCaballo(){
+
+	list<Action> secuencia;
+
+	secuencia.push_back(WALK);
+	secuencia.push_back(WALK);
+	secuencia.push_back(TURN_SR);
+	secuencia.push_back(TURN_SR);
+	secuencia.push_back(WALK);
+
+	return secuencia;
+}
+
+list<Action> ComportamientoAuxiliar::AnchuraAuxiliar(const EstadoA &inicio, const EstadoA &final,
+	const vector<vector<unsigned char>> &terreno, const vector<vector<unsigned char>> &altura){
+
+	NodoA current_node;
+	list<NodoA> frontier;
+	list<NodoA> explored;
+	list<Action> path;
+
+	current_node.estado = inicio;
+	frontier.push_back(current_node);
+	bool SolutionFound = (current_node.estado.f == final.f and current_node.estado.c == final.c);
+
+	while (!SolutionFound and !frontier.empty()){
+
+		current_node = frontier.front();
+		frontier.pop_front();
+		explored.push_back(current_node);
+
+		if (terreno[current_node.estado.f][current_node.estado.c] == 'D') {
+			current_node.estado.zapatillas = true;
+		}
+
+		NodoA child_WALK = current_node;
+		child_WALK.estado = applyA(WALK, current_node.estado, terreno, altura);
+		if (!Find(child_WALK, frontier) and !Find(child_WALK, explored)) {
+			if (child_WALK.estado.f == final.f and child_WALK.estado.c == final.c){
+				child_WALK.secuencia.push_back(WALK);
+				SolutionFound = true;
+				current_node = child_WALK;
+			} else {
+				child_WALK.secuencia.push_back(WALK);
+				frontier.push_back(child_WALK);
+			}
+		}
+
+		if (!SolutionFound) {
+			NodoA child_TURN_SR = current_node;
+			child_TURN_SR.estado = applyA(TURN_SR, current_node.estado, terreno, altura);
+			if (!Find(child_TURN_SR, frontier) and !Find(child_TURN_SR, explored)) {
+				if (child_TURN_SR.estado.f == final.f and child_TURN_SR.estado.c == final.c){
+					child_TURN_SR.secuencia.push_back(TURN_SR);
+					SolutionFound = true;
+					current_node = child_TURN_SR;
+				} else {
+					child_TURN_SR.secuencia.push_back(TURN_SR);
+					frontier.push_back(child_TURN_SR);
+				}
+			}
+		}
+	}
+
+	if (SolutionFound)
+		path = current_node.secuencia;
+
+	return path;
+
+}
+
+list<Action> ComportamientoAuxiliar::DijkstraAuxiliar(const EstadoA &inicio, const EstadoA &final, const vector<vector<unsigned char>> &terreno, 
+	const vector<vector<unsigned char>> &altura
+){
+    // Priority queue para Dijkstra (ordenada por coste ascendente)
+    priority_queue<NodoA, vector<NodoA>, greater<NodoA>> frontier;
+    list<NodoA> explored;
+    list<Action> path;
+
+    NodoA current_node;
+    current_node.estado = inicio;
+    current_node.coste = 0; // Coste inicial
+    frontier.push(current_node);
+
+    bool SolutionFound = (current_node.estado == final);
+
+    while (!SolutionFound && !frontier.empty()) {
+        current_node = frontier.top(); // Extrae el nodo con menor coste
+        frontier.pop();
+
+        if (current_node.estado == final) {
+            SolutionFound = true;
+            break;
+        }
+
+        // Si ya fue explorado con un coste menor, lo ignoramos
+        if (Find(current_node, explored))
+            continue;
+
+        explored.push_back(current_node);
+
+        // Actualizar zapatillas si está en casilla 'D'
+        if (terreno[current_node.estado.f][current_node.estado.c] == 'D') {
+            current_node.estado.zapatillas = true;
+        }
+
+        // Generar hijos (WALK y TURN_SR)
+        Action acciones[] = {WALK, TURN_SR};
+        for(Action accion : acciones) {
+            NodoA child = current_node;
+            child.estado = applyA(accion, current_node.estado, terreno, altura);
+            
+			if(child == current_node){
+				int coste_casilla = CalculaCosteA(current_node.estado.f,	current_node.estado.c, child.estado.f, child.estado.c, child.estado.zapatillas, accion, mapaResultado, mapaCotas);
+				child.coste = current_node.coste + coste_casilla;
+			}
+
+            if (!Find(child, explored)) {
+                child.secuencia.push_back(accion);
+                frontier.push(child); // da igual que se inserte duplicado, porque si el nodo ya ha sido explorado simplemente se ignorará aunque sea menos eficiente
+            }
+        }
+    }
+
+    if (SolutionFound)
+        path = current_node.secuencia;
+
+    return path;
+}
+
+Action ComportamientoAuxiliar::ComportamientoAuxiliarNivel_E(Sensores sensores){
+	Action accion = IDLE;
+	if (!hayPlan){
+	// Invocar al método de búsqueda
+		EstadoA inicio, fin;
+		inicio.f = sensores.posF;
+		inicio.c = sensores.posC;
+		inicio.brujula = sensores.rumbo;
+		inicio.zapatillas = tiene_zapatillas;
+		fin.f = sensores.destinoF;
+		fin.c = sensores.destinoC;
+		plan = AnchuraAuxiliar(inicio, fin, mapaResultado, mapaCotas);
+		VisualizaPlanA(inicio,plan);
+		hayPlan = plan.size() != 0 ;
+	}
+	if (hayPlan and plan.size()>0){
+		accion = plan.front();
+		plan.pop_front();
+	}
+	if (plan.size()== 0){
+		hayPlan = false;
+	}
+	return accion;
 }
 
 Action ComportamientoAuxiliar::ComportamientoAuxiliarNivel_0(Sensores sensores)

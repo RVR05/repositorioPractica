@@ -140,18 +140,29 @@ CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/auxiliar.cpp.o: Compor
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/11/bits/std_abs.h \
-  include/comportamientos/comportamiento.hpp \
-  /usr/include/c++/11/vector \
+  /usr/include/c++/11/list \
   /usr/include/c++/11/bits/allocator.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
   /usr/include/c++/11/ext/new_allocator.h \
-  /usr/include/c++/11/bits/stl_construct.h \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_list.h \
   /usr/include/c++/11/ext/alloc_traits.h \
   /usr/include/c++/11/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/list.tcc \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/vector \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/stl_queue.h \
+  include/comportamientos/comportamiento.hpp \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/ostream \
   /usr/include/c++/11/ios \
@@ -495,18 +506,86 @@ CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/rescatador.cpp.o: Comp
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/11/bits/std_abs.h \
-  include/comportamientos/comportamiento.hpp \
-  /usr/include/c++/11/vector \
+  /usr/include/c++/11/list \
   /usr/include/c++/11/bits/allocator.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
   /usr/include/c++/11/ext/new_allocator.h \
-  /usr/include/c++/11/bits/stl_construct.h \
-  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_list.h \
   /usr/include/c++/11/ext/alloc_traits.h \
   /usr/include/c++/11/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/list.tcc \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/vector \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/stl_queue.h \
+  /usr/include/c++/11/set \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/bits/stl_set.h \
+  /usr/include/c++/11/bits/stl_multiset.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/iostream \
+  /usr/include/c++/11/ostream \
+  /usr/include/c++/11/ios \
+  /usr/include/c++/11/bits/char_traits.h \
+  /usr/include/c++/11/bits/localefwd.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h \
+  /usr/include/c++/11/clocale \
+  /usr/include/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/11/cctype \
+  /usr/include/ctype.h \
+  /usr/include/c++/11/bits/ios_base.h \
+  /usr/include/c++/11/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
+  /usr/include/c++/11/bits/locale_classes.h \
+  /usr/include/c++/11/string \
+  /usr/include/c++/11/bits/ostream_insert.h \
+  /usr/include/c++/11/bits/cxxabi_forced.h \
+  /usr/include/c++/11/bits/basic_string.h \
+  /usr/include/c++/11/ext/string_conversions.h \
+  /usr/include/c++/11/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/c++/11/bits/charconv.h \
+  /usr/include/c++/11/bits/basic_string.tcc \
+  /usr/include/c++/11/bits/locale_classes.tcc \
+  /usr/include/c++/11/system_error \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
+  /usr/include/c++/11/stdexcept \
+  /usr/include/c++/11/streambuf \
+  /usr/include/c++/11/bits/streambuf.tcc \
+  /usr/include/c++/11/bits/basic_ios.h \
+  /usr/include/c++/11/bits/locale_facets.h \
+  /usr/include/c++/11/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
+  /usr/include/c++/11/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
+  /usr/include/c++/11/bits/locale_facets.tcc \
+  /usr/include/c++/11/bits/basic_ios.tcc \
+  /usr/include/c++/11/bits/ostream.tcc \
+  /usr/include/c++/11/istream \
+  /usr/include/c++/11/bits/istream.tcc \
+  include/comportamientos/comportamiento.hpp \
   include/motorlib/util.h
 
 CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/vandalo.cpp.o: Comportamientos_Jugador/vandalo.cpp \
@@ -753,6 +832,14 @@ src/comportamientos/comportamiento.cpp:
 
 Comportamientos_Jugador/vandalo.cpp:
 
+/usr/include/c++/11/bits/stl_map.h:
+
+/usr/include/c++/11/bits/erase_if.h:
+
+/usr/include/c++/11/bits/stl_multiset.h:
+
+/usr/include/c++/11/bits/stl_set.h:
+
 Comportamientos_Jugador/rescatador.cpp:
 
 Comportamientos_Jugador/excursionista.cpp:
@@ -764,8 +851,6 @@ Comportamientos_Jugador/excursionista.cpp:
 /usr/include/c++/11/bits/basic_ios.tcc:
 
 /usr/include/c++/11/bits/locale_facets.tcc:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
 /usr/include/c++/11/bits/streambuf_iterator.h:
 
@@ -797,6 +882,8 @@ Comportamientos_Jugador/excursionista.cpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
 
+/usr/include/c++/11/set:
+
 /usr/include/c++/11/bits/ios_base.h:
 
 /usr/include/ctype.h:
@@ -813,6 +900,10 @@ Comportamientos_Jugador/excursionista.cpp:
 
 /usr/include/c++/11/bits/localefwd.h:
 
+include/comportamientos/comportamiento.hpp:
+
+/usr/include/c++/11/bits/stl_heap.h:
+
 Comportamientos_Jugador/rescatador.hpp:
 
 /usr/include/c++/11/bits/vector.tcc:
@@ -823,23 +914,29 @@ Comportamientos_Jugador/rescatador.hpp:
 
 /usr/include/c++/11/bits/stl_vector.h:
 
+/usr/include/c++/11/vector:
+
+/usr/include/c++/11/bits/stl_deque.h:
+
+/usr/include/c++/11/bits/stl_uninitialized.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
+
+/usr/include/c++/11/bits/list.tcc:
+
 /usr/include/c++/11/bits/alloc_traits.h:
 
 /usr/include/c++/11/bits/cxxabi_forced.h:
 
 /usr/include/c++/11/ext/alloc_traits.h:
 
-/usr/include/c++/11/bits/stl_uninitialized.h:
+/usr/include/c++/11/bits/stl_list.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
 /usr/include/c++/11/bits/allocator.h:
-
-/usr/include/c++/11/vector:
-
-include/comportamientos/comportamiento.hpp:
 
 /usr/include/c++/11/bits/std_abs.h:
 
@@ -850,6 +947,8 @@ include/comportamientos/comportamiento.hpp:
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/c++/11/ext/aligned_buffer.h:
 
 /usr/include/endian.h:
 
@@ -883,6 +982,8 @@ Comportamientos_Jugador/vandalo.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
+/usr/include/c++/11/map:
+
 /usr/include/c++/11/bits/range_access.h:
 
 /usr/include/c++/11/bits/parse_numbers.h:
@@ -897,6 +998,8 @@ Comportamientos_Jugador/vandalo.hpp:
 
 /usr/include/c++/11/ios:
 
+/usr/include/c++/11/deque:
+
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
@@ -908,6 +1011,8 @@ Comportamientos_Jugador/vandalo.hpp:
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/c++/11/ext/string_conversions.h:
+
+/usr/include/c++/11/list:
 
 /usr/include/c++/11/bits/exception_ptr.h:
 
@@ -946,6 +1051,8 @@ Comportamientos_Jugador/excursionista.hpp:
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/usr/include/c++/11/bits/stl_multimap.h:
 
 /usr/include/features.h:
 
@@ -986,6 +1093,8 @@ Comportamientos_Jugador/excursionista.hpp:
 /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/c++/11/queue:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
@@ -1041,6 +1150,8 @@ Comportamientos_Jugador/auxiliar.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
+/usr/include/c++/11/bits/stl_tree.h:
+
 /usr/include/c++/11/type_traits:
 
 /usr/include/c++/11/tuple:
@@ -1085,6 +1196,8 @@ Comportamientos_Jugador/auxiliar.cpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
+/usr/include/c++/11/bits/stl_queue.h:
+
 /usr/include/c++/11/bits/stl_iterator_base_funcs.h:
 
 /usr/include/c++/11/debug/assertions.h:
@@ -1109,6 +1222,8 @@ include/motorlib/util.h:
 
 /usr/include/c++/11/bits/invoke.h:
 
+/usr/include/c++/11/bits/allocated_ptr.h:
+
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/c++/11/bits/functional_hash.h:
@@ -1120,6 +1235,8 @@ include/motorlib/util.h:
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
 /usr/include/c++/11/iostream:
+
+/usr/include/c++/11/bits/deque.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 

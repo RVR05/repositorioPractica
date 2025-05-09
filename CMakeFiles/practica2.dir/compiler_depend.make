@@ -246,6 +246,25 @@ CMakeFiles/practica2.dir/bin_src/juego.cc.o: bin_src/juego.cc \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/unique_ptr.h \
   /usr/include/c++/11/bits/this_thread_sleep.h \
+  /usr/include/c++/11/list \
+  /usr/include/c++/11/bits/stl_list.h \
+  /usr/include/c++/11/bits/allocated_ptr.h \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/list.tcc \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/stl_queue.h \
+  /usr/include/c++/11/set \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/bits/stl_set.h \
+  /usr/include/c++/11/bits/stl_multiset.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
   include/comportamientos/comportamiento.hpp \
   Comportamientos_Jugador/excursionista.hpp \
   Comportamientos_Jugador/vandalo.hpp \
@@ -274,19 +293,8 @@ CMakeFiles/practica2.dir/bin_src/juego.cc.o: bin_src/juego.cc \
   include/modelos/perro/cabeza.hpp \
   include/modelos/perro/lomo.hpp \
   include/glui/glui.h \
-  /usr/include/c++/11/cstring \
-  /usr/include/c++/11/list \
-  /usr/include/c++/11/bits/stl_list.h \
-  /usr/include/c++/11/bits/allocated_ptr.h \
-  /usr/include/c++/11/ext/aligned_buffer.h \
-  /usr/include/c++/11/bits/list.tcc
+  /usr/include/c++/11/cstring
 
-
-/usr/include/c++/11/bits/list.tcc:
-
-/usr/include/c++/11/bits/allocated_ptr.h:
-
-/usr/include/c++/11/list:
 
 include/glui/glui.h:
 
@@ -304,6 +312,40 @@ include/modelos/aldeano/pierna.hpp:
 
 include/modelos/aldeano/cintura.hpp:
 
+include/modelos/retrato.hpp:
+
+include/modelos/aldeano/cabeza.hpp:
+
+include/modelos/aldeano/torso.hpp:
+
+include/modelos/aldeano/aldeano.hpp:
+
+include/modelos_belkan.hpp:
+
+/usr/include/GL/glu.h:
+
+/usr/include/GL/freeglut_std.h:
+
+/usr/include/GL/glut.h:
+
+include/motorlib/mapa.hpp:
+
+Comportamientos_Jugador/auxiliar.hpp:
+
+Comportamientos_Jugador/vandalo.hpp:
+
+Comportamientos_Jugador/excursionista.hpp:
+
+/usr/include/c++/11/bits/stl_multimap.h:
+
+/usr/include/c++/11/bits/stl_map.h:
+
+/usr/include/c++/11/map:
+
+/usr/include/c++/11/bits/stl_multiset.h:
+
+/usr/include/c++/11/bits/stl_set.h:
+
 /usr/include/c++/11/bits/stl_construct.h:
 
 include/modelos/colaborador/colaborador.hpp:
@@ -314,11 +356,11 @@ include/modelos/colaborador/colaborador.hpp:
 
 /usr/include/c++/11/bits/basic_string.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
 /usr/include/c++/11/backward/binders.h:
 
 include/obj3dlib/tetraedro3d.h:
+
+/usr/include/c++/11/bits/deque.tcc:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
 
@@ -342,6 +384,8 @@ include/obj3dlib/tetraedro3d.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
+/usr/include/c++/11/bits/allocated_ptr.h:
+
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
@@ -364,6 +408,8 @@ include/obj3dlib/objeto3d.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
+/usr/include/c++/11/set:
+
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
@@ -373,6 +419,10 @@ include/obj3dlib/objeto3d.h:
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /usr/include/c++/11/bits/localefwd.h:
+
+include/motorlib/util.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
 
 /usr/include/c++/11/cctype:
 
@@ -392,8 +442,6 @@ include/obj3dlib/objeto3d.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
-/usr/include/GL/freeglut_std.h:
-
 /usr/include/wchar.h:
 
 include/modelos/jugador/quesito.hpp:
@@ -406,6 +454,8 @@ include/modelos/jugador/quesito.hpp:
 
 /usr/include/c++/11/tuple:
 
+/usr/include/c++/11/bits/stl_tree.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
@@ -417,6 +467,8 @@ include/modelos/jugador/quesito.hpp:
 /usr/include/c++/11/ext/string_conversions.h:
 
 /usr/include/c++/11/bits/exception_ptr.h:
+
+/usr/include/c++/11/list:
 
 /usr/include/c++/11/bits/invoke.h:
 
@@ -456,7 +508,7 @@ include/modelos/jugador/quesito.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
-/usr/include/GL/glu.h:
+/usr/include/c++/11/deque:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
@@ -493,6 +545,8 @@ include/modelos/jugador/jugador3d.hpp:
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/c++/11/queue:
 
 /usr/include/c++/11/bits/char_traits.h:
 
@@ -532,12 +586,6 @@ include/modelos/aldeano/brazo.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
-Comportamientos_Jugador/excursionista.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
 /usr/include/GL/glext.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
@@ -546,11 +594,7 @@ Comportamientos_Jugador/excursionista.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-include/modelos/aldeano/torso.hpp:
-
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
-
-Comportamientos_Jugador/vandalo.hpp:
 
 include/modelos/perro/lomo.hpp:
 
@@ -586,6 +630,12 @@ include/motorlib/entidad.hpp:
 
 /usr/include/ctype.h:
 
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/usr/include/c++/11/bits/stl_queue.h:
+
 /usr/include/c++/11/clocale:
 
 /usr/include/c++/11/bits/ostream.tcc:
@@ -596,15 +646,17 @@ include/motorlib/entidad.hpp:
 
 /usr/include/c++/11/math.h:
 
-/usr/include/c++/11/ext/aligned_buffer.h:
-
-/usr/include/x86_64-linux-gnu/sys/types.h:
+/usr/include/c++/11/bits/erase_if.h:
 
 /usr/include/c++/11/bits/ptr_traits.h:
 
 /usr/include/stdint.h:
 
 /usr/include/endian.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/c++/11/ext/aligned_buffer.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
@@ -615,8 +667,6 @@ include/obj3dlib/toro3d.h:
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/alloca.h:
-
-/usr/include/c++/11/bits/std_abs.h:
 
 /usr/include/c++/11/cstdio:
 
@@ -690,6 +740,8 @@ include/obj3dlib/jpeg_reader/jpg_imagen.hpp:
 
 include/obj3dlib.hpp:
 
+/usr/include/c++/11/bits/list.tcc:
+
 /usr/include/c++/11/bits/this_thread_sleep.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
@@ -725,8 +777,6 @@ include/obj3dlib/octaedro3d.h:
 /usr/include/string.h:
 
 /usr/include/c++/11/vector:
-
-include/motorlib/mapa.hpp:
 
 /usr/include/c++/11/bits/stl_uninitialized.h:
 
@@ -767,10 +817,6 @@ include/obj3dlib/vertex.h:
 /usr/include/c++/11/bits/postypes.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
-
-/usr/include/c++/11/bits/stl_list.h:
-
-/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 /usr/include/KHR/khrplatform.h:
 
@@ -818,20 +864,16 @@ include/obj3dlib/cono3dwire.h:
 
 /usr/include/c++/11/bits/uses_allocator.h:
 
-/usr/include/x86_64-linux-gnu/sys/select.h:
-
-include/motorlib/util.h:
-
 /usr/include/c++/11/bits/refwrap.h:
 
-Comportamientos_Jugador/auxiliar.hpp:
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
-/usr/include/GL/glut.h:
+/usr/include/c++/11/bits/stl_list.h:
 
-include/modelos_belkan.hpp:
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
-include/modelos/aldeano/aldeano.hpp:
+/usr/include/c++/11/bits/stl_deque.h:
 
-include/modelos/aldeano/cabeza.hpp:
+/usr/include/c++/11/bits/std_abs.h:
 
-include/modelos/retrato.hpp:
+/usr/include/c++/11/bits/stl_heap.h:
