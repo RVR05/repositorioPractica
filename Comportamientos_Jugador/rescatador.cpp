@@ -878,7 +878,7 @@ void SituarSensorEnMapaR(vector<vector<unsigned char>> &m, vector<vector<unsigne
 }
 ////////////////////////////////////
 
-////////////////////////////////////	NIVEL 2 Y 3
+////////////////////////////////////	NIVEL 2
 
 void AnularMatrizR(vector<vector<unsigned char>> &m){
 	for (int i = 0; i < m[0].size(); i++)
@@ -1229,7 +1229,7 @@ int CalculaCosteR(int i, int j, int newI, int newJ, Action accion, const vector<
 list<Action> ComportamientoRescatador::DijkstraR(const EstadoR &inicio, const EstadoR &final, const vector<vector<unsigned char>> &terreno, 
 	const vector<vector<unsigned char>> &altura
 ){
-    priority_queue<NodoR, vector<NodoR>, CompararNodoR> frontier;
+    priority_queue<NodoR, vector<NodoR>, greater<NodoR>> frontier;
     map<EstadoR, int> explored;
     list<Action> path;
 
@@ -1249,8 +1249,8 @@ list<Action> ComportamientoRescatador::DijkstraR(const EstadoR &inicio, const Es
 			current_node.estado.zapatillas = true;				
 		}
 		
-		if(explored.find(current_node.estado) == explored.end()){
-			if(explored[current_node.estado] < current_node.coste)
+		if(explored.find(current_node.estado) != explored.end()){
+			if(explored[current_node.estado] <= current_node.coste)
 				continue; // salta esta exploracion de nodo si ya se ha explorado con un menor coste
 		}
 
@@ -1277,8 +1277,6 @@ list<Action> ComportamientoRescatador::DijkstraR(const EstadoR &inicio, const Es
 				child.coste = current_node.coste + coste_casilla;
 
 				if (explored.find(child.estado) == explored.end() || child.coste < explored[child.estado]) {
-
-					explored[child.estado] = child.coste;
 					child.secuencia.push_back(accion);
 					frontier.push(child);
 				}
@@ -1294,6 +1292,10 @@ list<Action> ComportamientoRescatador::DijkstraR(const EstadoR &inicio, const Es
     return path;
 }
 
+//////////////////////////////////// 
+
+////////////////////////////////////	NIVEL 3
+
 Action ComportamientoRescatador::think(Sensores sensores)
 {
 	Action accion = IDLE;
@@ -1301,17 +1303,17 @@ Action ComportamientoRescatador::think(Sensores sensores)
 	switch (sensores.nivel)
 	{
 	case 0:
-		//accion = ComportamientoRescatadorNivel_0 (sensores);
+		accion = ComportamientoRescatadorNivel_0 (sensores);
 		break;
 	case 1:
-		//accion = ComportamientoRescatadorNivel_1 (sensores);
+		accion = ComportamientoRescatadorNivel_1 (sensores);
 		break;
 	case 2:
 		//accion = ComportamientoRescatadorNivel_E(sensores);
 		accion = ComportamientoRescatadorNivel_2 (sensores);
 		break;
 	case 3:
-		//accion = ComportamientoRescatadorNivel_E(sensores);
+		accion = IDLE;
 		//accion = ComportamientoRescatadorNivel_3 (sensores);
 		break;
 	case 4:

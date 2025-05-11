@@ -211,4 +211,8 @@ CMakeFiles/motorLib.dir/src/motorlib/entidad.cpp.o: \
  /home/robert/Escritorio/Repositorios\ 2do\ cuatri/Visual/practica2/include/../Comportamientos_Jugador/excursionista.hpp \
  /home/robert/Escritorio/Repositorios\ 2do\ cuatri/Visual/practica2/include/../Comportamientos_Jugador/vandalo.hpp \
  /home/robert/Escritorio/Repositorios\ 2do\ cuatri/Visual/practica2/include/../Comportamientos_Jugador/auxiliar.hpp \
+ /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
+ /usr/include/c++/11/bits/algorithmfwd.h \
+ /usr/include/c++/11/bits/stl_tempbuf.h \
+ /usr/include/c++/11/bits/uniform_int_dist.h \
  /home/robert/Escritorio/Repositorios\ 2do\ cuatri/Visual/practica2/include/motorlib/util.h

@@ -9,19 +9,18 @@ Action ComportamientoAuxiliar::think(Sensores sensores)
 	switch (sensores.nivel)
 	{
 	case 0:
-		//accion = ComportamientoAuxiliarNivel_0 (sensores);
+		accion = ComportamientoAuxiliarNivel_0 (sensores);
 		break;
 	case 1:
-		//accion = ComportamientoAuxiliarNivel_1 (sensores);
+		accion = ComportamientoAuxiliarNivel_1 (sensores);
 		break;
 	case 2:
 		accion = IDLE;
 		//accion = ComportamientoAuxiliarNivel_2 (sensores);
 		break;
 	case 3:
-		accion = IDLE;
 		//accion = ComportamientoAuxiliarNivel_3 (sensores);
-		//accion = ComportamientoAuxiliarNivel_E(sensores);
+		accion = ComportamientoAuxiliarNivel_E(sensores);
 		break;
 	case 4:
 		// accion = ComportamientoAuxiliarNivel_4 (sensores);
@@ -911,7 +910,7 @@ int ComportamientoAuxiliar::interact(Action accion, int valor)
 	return 0;
 }
 
-/////////////////////////////////////// NIVEL 2 Y 3
+/////////////////////////////////////// NIVEL 2 y 3
 
 void AnularMatrizA(vector<vector<unsigned char>> &m){
 	for (int i = 0; i < m[0].size(); i++)
@@ -1021,103 +1020,55 @@ bool CasillaAccesibleAuxiliar(const EstadoA &st, const vector<vector<unsigned ch
 
 EstadoA applyA(Action accion, const EstadoA & st, const vector<vector<unsigned char>> &terreno,
 	const vector<vector<unsigned char>> &altura){
-	EstadoA next = st;
+	EstadoA next;
+	next.f = -1;
 	switch(accion){
 	case WALK:
-	if (CasillaAccesibleAuxiliar(st,terreno,altura)){
-	next = NextCasillaAuxiliar(st);
-	}
+		if (CasillaAccesibleAuxiliar(st,terreno,altura)){
+			next = NextCasillaAuxiliar(st);
+		}
 	break;
 	case TURN_SR:
-	next.brujula = (next.brujula+1)%8;
+		next = st;
+		next.brujula = (next.brujula+1)%8;
 	break;
 	}
 	return next;
 	}
 
-bool Find (const NodoA & st, const list<NodoA> &lista){
-	auto it = lista.begin();
-	while (it != lista.end() and !((*it) == st)){
-		it++;
-	}
-	return (it != lista.end());
-}
-
-int CalculaCosteA(int i, int j, int newI, int newJ, bool zapatillas, Action accion, vector<vector<unsigned char>> &terreno, vector<vector<unsigned char>> &altura){
+int CalculaCosteA(int i, int j, int newI, int newJ, Action accion, const vector<vector<unsigned char>> &terreno, const vector<vector<unsigned char>> &altura){
 
 	int coste = 0;
 
-	char tipo = terreno[newI][newJ];
+	char tipo = terreno[i][j];
+	int altura1 = altura[i][j];
+	int altura2 = altura[newI][newJ];
+	int mult = 0;
+	if(altura1 - altura2 != 0)
+		mult = (altura1 - altura2) < 0 ? +1 : -1;
 
 	if(accion == WALK){
 		
-		if(altura[i][j] > altura[newI][newJ]){
+		switch (tipo){
 
-			switch (tipo){
+			case 'A':
+				coste = 100 + (10 * mult);
+			break;
 
-				case 'A':
-					coste = 110;
-				break;
+			case 'T':
+				coste = 20 + (5 * mult);
+			break;
 
-				case 'T':
-					coste = 25;
-				break;
-
-				case 'S':
-					coste = 3;
-				break;
+			case 'S':
+				coste = 2 + (1 * mult);
+			break;
 				
-				default:
-					coste = 1;
-				break;
+			default:
+				coste = 1;
+			break;
 
-			};
+		};
 
-		} else if(altura[i][j] < altura[newI][newJ]){
-
-			switch (tipo){
-
-				case 'A':
-					coste = 90;
-				break;
-
-				case 'T':
-					coste = 15;
-				break;
-
-				case 'S':
-					coste = 1;
-				break;
-				
-				default:
-					coste = 1;
-				break;
-
-			};
-			
-		} else {
-
-			switch (tipo){
-
-				case 'A':
-					coste = 100;
-				break;
-
-				case 'T':
-					coste = 20;
-				break;
-
-				case 'S':
-					coste = 2;
-				break;
-				
-				default:
-					coste = 1;
-				break;
-
-			};
-
-		}
 
 	} else if (accion == TURN_SR){
 
@@ -1140,139 +1091,91 @@ int CalculaCosteA(int i, int j, int newI, int newJ, bool zapatillas, Action acci
 				break;
 		};
 
-	}
+	} 
 
+	return coste;
 }
 
-list<Action> avanzaCaballo(){
-
-	list<Action> secuencia;
-
-	secuencia.push_back(WALK);
-	secuencia.push_back(WALK);
-	secuencia.push_back(TURN_SR);
-	secuencia.push_back(TURN_SR);
-	secuencia.push_back(WALK);
-
-	return secuencia;
+int heuristica(int origen_i, int origen_j, int destino_i, int destino_j){
+    int x = abs(origen_i - destino_i);
+    int y = abs(origen_j - destino_j);
+    int distancia = max(x, y);
+    return distancia;
 }
 
-list<Action> ComportamientoAuxiliar::AnchuraAuxiliar(const EstadoA &inicio, const EstadoA &final,
-	const vector<vector<unsigned char>> &terreno, const vector<vector<unsigned char>> &altura){
+list<Action> ComportamientoAuxiliar::AEstrellaAuxiliar(const EstadoA &inicio, const EstadoA &final,
+    const vector<vector<unsigned char>> &terreno, const vector<vector<unsigned char>> &altura) {
 
-	NodoA current_node;
-	list<NodoA> frontier;
-	list<NodoA> explored;
-	list<Action> path;
-
-	current_node.estado = inicio;
-	frontier.push_back(current_node);
-	bool SolutionFound = (current_node.estado.f == final.f and current_node.estado.c == final.c);
-
-	while (!SolutionFound and !frontier.empty()){
-
-		current_node = frontier.front();
-		frontier.pop_front();
-		explored.push_back(current_node);
-
-		if (terreno[current_node.estado.f][current_node.estado.c] == 'D') {
-			current_node.estado.zapatillas = true;
-		}
-
-		NodoA child_WALK = current_node;
-		child_WALK.estado = applyA(WALK, current_node.estado, terreno, altura);
-		if (!Find(child_WALK, frontier) and !Find(child_WALK, explored)) {
-			if (child_WALK.estado.f == final.f and child_WALK.estado.c == final.c){
-				child_WALK.secuencia.push_back(WALK);
-				SolutionFound = true;
-				current_node = child_WALK;
-			} else {
-				child_WALK.secuencia.push_back(WALK);
-				frontier.push_back(child_WALK);
-			}
-		}
-
-		if (!SolutionFound) {
-			NodoA child_TURN_SR = current_node;
-			child_TURN_SR.estado = applyA(TURN_SR, current_node.estado, terreno, altura);
-			if (!Find(child_TURN_SR, frontier) and !Find(child_TURN_SR, explored)) {
-				if (child_TURN_SR.estado.f == final.f and child_TURN_SR.estado.c == final.c){
-					child_TURN_SR.secuencia.push_back(TURN_SR);
-					SolutionFound = true;
-					current_node = child_TURN_SR;
-				} else {
-					child_TURN_SR.secuencia.push_back(TURN_SR);
-					frontier.push_back(child_TURN_SR);
-				}
-			}
-		}
-	}
-
-	if (SolutionFound)
-		path = current_node.secuencia;
-
-	return path;
-
-}
-
-list<Action> ComportamientoAuxiliar::DijkstraAuxiliar(const EstadoA &inicio, const EstadoA &final, const vector<vector<unsigned char>> &terreno, 
-	const vector<vector<unsigned char>> &altura
-){
-    // Priority queue para Dijkstra (ordenada por coste ascendente)
-    priority_queue<NodoA, vector<NodoA>, greater<NodoA>> frontier;
-    list<NodoA> explored;
+    priority_queue<NodoA, vector<NodoA>, greater<NodoA>> frontier;  // Cola de prioridad ordenada por fX
+    map<EstadoA, int> explored;
     list<Action> path;
 
     NodoA current_node;
     current_node.estado = inicio;
-    current_node.coste = 0; // Coste inicial
+    current_node.gX = 0;
+    current_node.hX = heuristica(inicio.f, inicio.c, final.f, final.c);
+	current_node.fX = current_node.gX + current_node.hX;
+
     frontier.push(current_node);
 
-    bool SolutionFound = (current_node.estado == final);
+    bool SolutionFound = (current_node.estado.f == final.f && current_node.estado.c == final.c);
 
     while (!SolutionFound && !frontier.empty()) {
-        current_node = frontier.top(); // Extrae el nodo con menor coste
+
+        current_node = frontier.top();
         frontier.pop();
 
-        if (current_node.estado == final) {
+        if(current_node.estado.f == final.f && current_node.estado.c == final.c) {
             SolutionFound = true;
             break;
         }
 
-        // Si ya fue explorado con un coste menor, lo ignoramos
-        if (Find(current_node, explored))
-            continue;
-
-        explored.push_back(current_node);
-
-        // Actualizar zapatillas si está en casilla 'D'
-        if (terreno[current_node.estado.f][current_node.estado.c] == 'D') {
+        // Si está en 'D', actualiza zapatillas
+        if(terreno[current_node.estado.f][current_node.estado.c] == 'D') {
             current_node.estado.zapatillas = true;
         }
 
-        // Generar hijos (WALK y TURN_SR)
-        Action acciones[] = {WALK, TURN_SR};
-        for(Action accion : acciones) {
+		if(explored.find(current_node.estado) != explored.end()){
+			if(explored[current_node.estado] <= current_node.gX)
+				continue; // salta esta exploracion de nodo si ya se ha explorado con un menor coste
+		}
+
+		explored[current_node.estado] = current_node.gX;
+
+        for (Action accion : {WALK, TURN_SR}) {
             NodoA child = current_node;
             child.estado = applyA(accion, current_node.estado, terreno, altura);
             
-			if(child == current_node){
-				int coste_casilla = CalculaCosteA(current_node.estado.f,	current_node.estado.c, child.estado.f, child.estado.c, child.estado.zapatillas, accion, mapaResultado, mapaCotas);
-				child.coste = current_node.coste + coste_casilla;
+
+            if(child.estado.f == -1)
+				continue;
+
+			if(terreno[child.estado.f][child.estado.c] == 'D') {
+				child.estado.zapatillas = true;
 			}
 
-            if (!Find(child, explored)) {
-                child.secuencia.push_back(accion);
-                frontier.push(child); // da igual que se inserte duplicado, porque si el nodo ya ha sido explorado simplemente se ignorará aunque sea menos eficiente
-            }
-        }
-    }
+			int coste = CalculaCosteA(current_node.estado.f, current_node.estado.c, child.estado.f, child.estado.c, accion, terreno, altura);
+				
+			child.gX = current_node.gX + coste;
+			child.hX = heuristica(child.estado.f, child.estado.c, final.f, final.c);
+			child.fX = child.gX + child.hX;
+				
 
-    if (SolutionFound)
+			if (explored.find(child.estado) == explored.end() || child.gX < explored[child.estado]) {
+				child.secuencia = current_node.secuencia;
+				child.secuencia.push_back(accion);
+				frontier.push(child);
+			}
+    	}
+	}
+
+    if (SolutionFound) {
         path = current_node.secuencia;
+    }
 
     return path;
 }
+
 
 Action ComportamientoAuxiliar::ComportamientoAuxiliarNivel_E(Sensores sensores){
 	Action accion = IDLE;
@@ -1285,7 +1188,7 @@ Action ComportamientoAuxiliar::ComportamientoAuxiliarNivel_E(Sensores sensores){
 		inicio.zapatillas = tiene_zapatillas;
 		fin.f = sensores.destinoF;
 		fin.c = sensores.destinoC;
-		plan = AnchuraAuxiliar(inicio, fin, mapaResultado, mapaCotas);
+		plan = AEstrellaAuxiliar(inicio, fin, mapaResultado, mapaCotas);
 		VisualizaPlanA(inicio,plan);
 		hayPlan = plan.size() != 0 ;
 	}

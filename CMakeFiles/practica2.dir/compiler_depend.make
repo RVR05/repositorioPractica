@@ -269,6 +269,11 @@ CMakeFiles/practica2.dir/bin_src/juego.cc.o: bin_src/juego.cc \
   Comportamientos_Jugador/excursionista.hpp \
   Comportamientos_Jugador/vandalo.hpp \
   Comportamientos_Jugador/auxiliar.hpp \
+  /usr/include/c++/11/algorithm \
+  /usr/include/c++/11/bits/stl_algo.h \
+  /usr/include/c++/11/bits/algorithmfwd.h \
+  /usr/include/c++/11/bits/stl_tempbuf.h \
+  /usr/include/c++/11/bits/uniform_int_dist.h \
   include/motorlib/util.h \
   include/motorlib/mapa.hpp \
   /usr/include/GL/glut.h \
@@ -329,6 +334,14 @@ include/modelos_belkan.hpp:
 /usr/include/GL/glut.h:
 
 include/motorlib/mapa.hpp:
+
+/usr/include/c++/11/bits/stl_tempbuf.h:
+
+/usr/include/c++/11/bits/algorithmfwd.h:
+
+/usr/include/c++/11/bits/stl_algo.h:
+
+/usr/include/c++/11/algorithm:
 
 Comportamientos_Jugador/auxiliar.hpp:
 
@@ -725,6 +738,8 @@ include/comportamientolib.hpp:
 include/obj3dlib/jpeg_reader/jpg_imagen.hpp:
 
 /usr/include/c++/11/stdexcept:
+
+/usr/include/c++/11/bits/uniform_int_dist.h:
 
 /usr/include/c++/11/bits/basic_ios.h:
 

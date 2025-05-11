@@ -262,6 +262,11 @@ CMakeFiles/motorLib.dir/src/motorlib/entidad.cpp.o: src/motorlib/entidad.cpp \
   Comportamientos_Jugador/excursionista.hpp \
   Comportamientos_Jugador/vandalo.hpp \
   Comportamientos_Jugador/auxiliar.hpp \
+  /usr/include/c++/11/algorithm \
+  /usr/include/c++/11/bits/stl_algo.h \
+  /usr/include/c++/11/bits/algorithmfwd.h \
+  /usr/include/c++/11/bits/stl_tempbuf.h \
+  /usr/include/c++/11/bits/uniform_int_dist.h \
   include/motorlib/util.h
 
 CMakeFiles/motorLib.dir/src/motorlib/mapa.cpp.o: src/motorlib/mapa.cpp \
@@ -529,6 +534,11 @@ CMakeFiles/motorLib.dir/src/motorlib/mapa.cpp.o: src/motorlib/mapa.cpp \
   Comportamientos_Jugador/excursionista.hpp \
   Comportamientos_Jugador/vandalo.hpp \
   Comportamientos_Jugador/auxiliar.hpp \
+  /usr/include/c++/11/algorithm \
+  /usr/include/c++/11/bits/stl_algo.h \
+  /usr/include/c++/11/bits/algorithmfwd.h \
+  /usr/include/c++/11/bits/stl_tempbuf.h \
+  /usr/include/c++/11/bits/uniform_int_dist.h \
   include/motorlib/util.h \
   include/modelos_belkan.hpp \
   include/modelos/aldeano/aldeano.hpp \
@@ -811,6 +821,11 @@ CMakeFiles/motorLib.dir/src/motorlib/monitor.cpp.o: src/motorlib/monitor.cpp \
   Comportamientos_Jugador/excursionista.hpp \
   Comportamientos_Jugador/vandalo.hpp \
   Comportamientos_Jugador/auxiliar.hpp \
+  /usr/include/c++/11/algorithm \
+  /usr/include/c++/11/bits/stl_algo.h \
+  /usr/include/c++/11/bits/algorithmfwd.h \
+  /usr/include/c++/11/bits/stl_tempbuf.h \
+  /usr/include/c++/11/bits/uniform_int_dist.h \
   include/motorlib/util.h \
   include/motorlib/mapa.hpp \
   /usr/include/GL/glut.h \
@@ -1115,6 +1130,11 @@ CMakeFiles/motorLib.dir/src/motorlib/motor_grafico.cpp.o: src/motorlib/motor_gra
   Comportamientos_Jugador/excursionista.hpp \
   Comportamientos_Jugador/vandalo.hpp \
   Comportamientos_Jugador/auxiliar.hpp \
+  /usr/include/c++/11/algorithm \
+  /usr/include/c++/11/bits/stl_algo.h \
+  /usr/include/c++/11/bits/algorithmfwd.h \
+  /usr/include/c++/11/bits/stl_tempbuf.h \
+  /usr/include/c++/11/bits/uniform_int_dist.h \
   include/motorlib/util.h \
   include/motorlib/mapa.hpp \
   /usr/include/GL/glut.h \
@@ -1410,6 +1430,11 @@ CMakeFiles/motorLib.dir/src/motorlib/motor_juego.cpp.o: src/motorlib/motor_juego
   Comportamientos_Jugador/excursionista.hpp \
   Comportamientos_Jugador/vandalo.hpp \
   Comportamientos_Jugador/auxiliar.hpp \
+  /usr/include/c++/11/algorithm \
+  /usr/include/c++/11/bits/stl_algo.h \
+  /usr/include/c++/11/bits/algorithmfwd.h \
+  /usr/include/c++/11/bits/stl_tempbuf.h \
+  /usr/include/c++/11/bits/uniform_int_dist.h \
   include/motorlib/util.h \
   include/motorlib/mapa.hpp \
   /usr/include/GL/glut.h \
@@ -1576,6 +1601,14 @@ include/modelos_belkan.hpp:
 /usr/include/GL/glut.h:
 
 include/motorlib/mapa.hpp:
+
+/usr/include/c++/11/bits/stl_tempbuf.h:
+
+/usr/include/c++/11/bits/algorithmfwd.h:
+
+/usr/include/c++/11/bits/stl_algo.h:
+
+/usr/include/c++/11/algorithm:
 
 Comportamientos_Jugador/auxiliar.hpp:
 
@@ -2038,6 +2071,8 @@ src/motorlib/motor_grafico.cpp:
 /usr/include/string.h:
 
 /usr/include/c++/11/bits/streambuf.tcc:
+
+/usr/include/c++/11/bits/uniform_int_dist.h:
 
 /usr/include/c++/11/bits/basic_ios.h:
 

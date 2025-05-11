@@ -162,6 +162,27 @@ CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/auxiliar.cpp.o: Compor
   /usr/include/c++/11/bits/vector.tcc \
   /usr/include/c++/11/bits/stl_heap.h \
   /usr/include/c++/11/bits/stl_queue.h \
+  /usr/include/c++/11/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/algorithm \
+  /usr/include/c++/11/bits/stl_algo.h \
+  /usr/include/c++/11/bits/algorithmfwd.h \
+  /usr/include/c++/11/bits/stl_tempbuf.h \
+  /usr/include/c++/11/bits/uniform_int_dist.h \
+  /usr/include/c++/11/map \
+  /usr/include/c++/11/bits/stl_tree.h \
+  /usr/include/c++/11/bits/stl_map.h \
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/bits/erase_if.h \
   include/comportamientos/comportamiento.hpp \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/ostream \
@@ -832,10 +853,6 @@ src/comportamientos/comportamiento.cpp:
 
 Comportamientos_Jugador/vandalo.cpp:
 
-/usr/include/c++/11/bits/stl_map.h:
-
-/usr/include/c++/11/bits/erase_if.h:
-
 /usr/include/c++/11/bits/stl_multiset.h:
 
 /usr/include/c++/11/bits/stl_set.h:
@@ -866,8 +883,6 @@ Comportamientos_Jugador/excursionista.cpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
 
-/usr/include/c++/11/bits/locale_classes.tcc:
-
 /usr/include/c++/11/bits/basic_string.tcc:
 
 /usr/include/c++/11/bits/charconv.h:
@@ -881,10 +896,6 @@ Comportamientos_Jugador/excursionista.cpp:
 /usr/include/c++/11/bits/locale_classes.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
-
-/usr/include/c++/11/set:
-
-/usr/include/c++/11/bits/ios_base.h:
 
 /usr/include/ctype.h:
 
@@ -901,6 +912,38 @@ Comportamientos_Jugador/excursionista.cpp:
 /usr/include/c++/11/bits/localefwd.h:
 
 include/comportamientos/comportamiento.hpp:
+
+/usr/include/c++/11/bits/erase_if.h:
+
+/usr/include/c++/11/bits/algorithmfwd.h:
+
+/usr/include/c++/11/bits/stl_map.h:
+
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/c++/11/bits/locale_classes.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
+/usr/include/c++/11/set:
+
+/usr/include/c++/11/bits/ios_base.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/include/c++/11/bits/stl_algo.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/include/math.h:
 
 /usr/include/c++/11/bits/stl_heap.h:
 
@@ -931,6 +974,8 @@ Comportamientos_Jugador/rescatador.hpp:
 /usr/include/c++/11/ext/alloc_traits.h:
 
 /usr/include/c++/11/bits/stl_list.h:
+
+/usr/include/c++/11/cmath:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
 
@@ -987,6 +1032,8 @@ Comportamientos_Jugador/vandalo.hpp:
 /usr/include/c++/11/bits/range_access.h:
 
 /usr/include/c++/11/bits/parse_numbers.h:
+
+/usr/include/c++/11/bits/uniform_int_dist.h:
 
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
 
@@ -1049,6 +1096,8 @@ Comportamientos_Jugador/vandalo.hpp:
 Comportamientos_Jugador/excursionista.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+
+/usr/include/c++/11/bits/stl_tempbuf.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
@@ -1162,6 +1211,8 @@ Comportamientos_Jugador/auxiliar.cpp:
 
 /usr/include/c++/11/bits/memoryfwd.h:
 
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
@@ -1235,6 +1286,8 @@ include/motorlib/util.h:
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
 /usr/include/c++/11/iostream:
+
+/usr/include/c++/11/algorithm:
 
 /usr/include/c++/11/bits/deque.tcc:
 

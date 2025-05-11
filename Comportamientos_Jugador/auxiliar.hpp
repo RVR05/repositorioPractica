@@ -7,6 +7,9 @@
 #include <cstdlib>
 #include <list>
 #include <queue>
+#include <cmath>
+#include <algorithm>
+#include <map>
 
 #include "comportamientos/comportamiento.hpp"
 
@@ -20,18 +23,25 @@ struct EstadoA {
     return f == st.f && c == st.c && brujula == st.brujula and zapatillas ==
     st.zapatillas;
   }
+  bool operator<(const EstadoA& other) const {
+    return std::tie(f, c, brujula, zapatillas) < std::tie(other.f, other.c, other.brujula, other.zapatillas);
+  }
 };
 
-struct NodoA{
+
+struct NodoA {
   EstadoA estado;
   list<Action> secuencia;
-  int coste;
-  bool operator==(const NodoA &node) const{
-    return estado == node.estado && coste == node.coste;
+  int gX; // Coste acumulado real (incluye giros y terreno)
+  int hX; // Heurística (Chebyshev * 2)
+  int fX;
+
+  bool operator>(const NodoA &node) const {
+      return fX > node.fX; // Ordenar por menor fX
   }
 
-  bool operator>(const NodoA &node) const{
-    return (coste > node.coste);
+  bool operator==(const NodoA &node) const{
+    return estado == node.estado && gX == node.gX && hX == node.hX && fX == node.fX;
   }
 };
 
@@ -79,10 +89,9 @@ public:
 
   list<Action> AnchuraAuxiliar(const EstadoA &inicio, const EstadoA &final,
     const vector<vector<unsigned char>> &terreno, const vector<vector<unsigned char>> &altura);
-  list<Action> DijkstraAuxiliar(const EstadoA &inicio, const EstadoA &final,
-      const vector<vector<unsigned char>> &terreno, const vector<vector<unsigned char>> &altura);
   Action ComportamientoAuxiliarNivel_E(Sensores sensores);
   void VisualizaPlanA(const EstadoA &st, const list<Action> &plan);
+  list<Action> AEstrellaAuxiliar(const EstadoA &inicio, const EstadoA &final, const vector<vector<unsigned char>> &terreno, const vector<vector<unsigned char>> &altura);
 
 private:
     // Variables de Estado

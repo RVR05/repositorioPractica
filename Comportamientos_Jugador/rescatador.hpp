@@ -54,23 +54,6 @@ struct NodoR{
   }
 };
 
-struct CompararNodoR {
-  bool operator()(const NodoR& a, const NodoR& b) {
-      // Priorizar por menor coste
-      if (a.coste != b.coste) {
-          return a.coste > b.coste;  // Orden ascendente (menor coste primero)
-      }
-      // Si coste igual, desempatar por coordenadas
-      else {
-          if (a.estado.f != b.estado.f) {
-              return a.estado.f > b.estado.f;
-          } else {
-              return a.estado.c > b.estado.c;
-          }
-      }
-  }
-};
-
 class ComportamientoRescatador : public Comportamiento
 {
 
